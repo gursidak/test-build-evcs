@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Logo.css'
+import { Link } from 'react-router-dom'
 class First extends Component {
     render() {
         return (
@@ -7,7 +8,11 @@ class First extends Component {
             <div className='body'>
                 <div className='content-box'>
                 <img src='logo.jpg' alt='logo' />
+                
+                <Link to='/sign' style={{color:'white' ,fontSize:'30px' , marginTop:'10px'}}>Sign-up</Link>
+                
                 <h1> Smart Charging Station powered by GATS  </h1>
+
                 </div>
             </div>
         </div>
