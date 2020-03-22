@@ -1,0 +1,84 @@
+.Sign {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.Sign .logo-header {
+  background-color: red;
+}
+
+.Sign .logo-header img {
+  height: 100px;
+  width: 10%;
+}
+
+.Sign .Sign-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: 80px;
+  height: 100%;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.Sign .sign-in-form {
+  padding: 30px;
+}
+
+.Sign .otp-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Sign .otp-input {
+  border-style: double;
+  border-radius: 25%;
+  margin: 0 0.4em;
+  outline: none;
+}
+
+.Sign Button {
+  display: block;
+  margin: 40px auto;
+}
+
+.Sign .login-link {
+  display: block;
+  padding-top: 60px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.Sign .login-link:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.Caraousel .logo-header {
+  background-color: red;
+}
+
+.Caraousel .logo-header img {
+  height: 100px;
+  width: 10%;
+}
+/*# sourceMappingURL=App.css.map */

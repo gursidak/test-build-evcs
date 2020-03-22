@@ -1,0 +1,53 @@
+@mixin Center {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+@mixin bottm {
+
+    display: flex;
+    justify-content: baseline;
+    
+}
+
+$textcolor : white ;
+$bodycolor:#FF0015;
+
+.body{
+    background-color : $bodycolor;
+    // @include Center();
+    display: flex;
+    justify-content: center;
+    flex-direction: row ;
+    color: $textcolor;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+.content-box{
+
+    @include Center();
+    flex-direction: column;
+
+img{
+
+    width:40%;
+    height: 35%;
+    padding-top:10%;
+}
+
+h1{
+
+    padding-top: 30%;
+    font-size:x-large;
+}
+
+
+}
+}
+
+
