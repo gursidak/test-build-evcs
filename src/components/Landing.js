@@ -9,7 +9,7 @@ class First extends Component {
                 <div className='content-box'>
                 <img src='logo.jpg' alt='logo' />
                 
-                <Link to='/sign' style={{color:'white' ,fontSize:'30px' , marginTop:'10px'}}>Sign-up</Link>
+                <Link to='/sign' style={{color:'white' ,fontSize:'30px'}}>Sign-up</Link>
                 
                 <h1> Smart Charging Station powered by GATS  </h1>
 
