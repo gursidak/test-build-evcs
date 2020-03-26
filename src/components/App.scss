@@ -13,6 +13,22 @@ img{
 
 }
 
+@media screen and (max-width:528px){
+    .logo-header{
+        img{
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .logo-header{
+        img{
+            width: 18%;
+        }
+    }
+}
+
 }
 
 .Sign{
@@ -54,7 +70,7 @@ img{
     .otp-input{
         border-style: double;
         border-radius: 25%;
-        margin: 0 0.4em;
+        margin: 0.2em;
         outline: none;
 
     }
@@ -81,6 +97,41 @@ img{
 
 }
 
+@media screen and (max-width:485px){
+
+    .Sign{
+        position: static;
+        // background-color: red;
+       .sign-in-form{
+            padding-top: 5px;
+            .otp-input{
+                border-style: double;
+                border-radius: 25%;
+                margin: 0em;
+                outline: none;
+            }
+
+            .login-link{
+                padding-top:0px;
+            }  
+          }
+    }
+
+
+    .addVehicleInfo{
+        background: red;
+    }
+}
+
+@media screen and (max-width:1050px){
+
+}
+
+// 
+// @media screen and (max-width:485px){
+    // 
+// }
+// 
 .Caraousel{
 
     @include header();

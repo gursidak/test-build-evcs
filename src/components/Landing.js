@@ -11,7 +11,7 @@ class First extends Component {
                 
                 <Link to='/sign' style={{color:'white' ,fontSize:'30px'}}>Sign-up</Link>
                 
-                <h1> Smart Charging Station powered by GATS  </h1>
+                <h1> Smart Charging Station powered by GATS </h1>
 
                 </div>
             </div>

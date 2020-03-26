@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import {Textfield , Button, Card} from 'react-mdl';
+import {Textfield , Button, Card, Grid, Cell} from 'react-mdl';
 import ReactMDL from 'react-mdl';
 // import OtpInput from 'react-otp-input';
 import { Link } from 'react-router-dom';
@@ -34,7 +34,7 @@ import { Link } from 'react-router-dom';
                <div>
                 <Card shadow={0} style={{width:'100%' , height:'500px'}}>   
                 <form className='sign-in-form'>
-                     <i style={{fontSize:'40px' , marginRight:'20px'}} className='fa fa-phone-square'></i>
+                     <i style={{fontSize:'40px', color:'red' , marginRight:'20px'}} className='fa fa-phone-square'></i>
                      <Textfield
                      style={{fontSize:'60px'}}
                      onChange={() => {}}
@@ -46,8 +46,8 @@ import { Link } from 'react-router-dom';
                      
                      />
 
-                     <h4>Enter Enter verification code </h4>
-                    <div className='otp-boxes'>
+                     <h4> Enter verification code </h4>
+                    <div className='otp-boxes' style={{textAlign:'center' , justifyContent:'center'}}>
                         <div style={{display:'flex' , alignItems:'center' }}>
                             <input className='otp-input' style={{width:'3rem', height:'3rem' , fontSize:'2rem' , textAlign:'center'}} maxLength='1'  ></input>
                         </div>
@@ -79,13 +79,15 @@ import { Link } from 'react-router-dom';
            else if(this.state.activelog === 1){
              return (
                  <div className="addVehicleInfo">
+                      <Card shadow={0} style={{width:'100%' , padding:'30px' , height:'500px'}}>   
+
                             <form className="form-elements">
                             <Textfield
                                 style={{fontSize:'60px'}}
                                 onChange={() => {}}
                                 label= "Good Name..."
                                 maxLength='10'
-                                style={{width: '400px' , color:'black' }}
+                                style={{width: '300px' , color:'black' }}
                             />
                             <br/>
                             <Textfield
@@ -96,7 +98,7 @@ import { Link } from 'react-router-dom';
                                 label="Contact Number..."
                                 maxLength='10'
                                 disabled
-                                style={{width: '400px'}}
+                                style={{width: '300px'}}
                              /> 
                             <br/>
                             <Textfield
@@ -105,11 +107,11 @@ import { Link } from 'react-router-dom';
                                 label= "EMAIL_ID..."
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 error="enter a valid email-address"
-                                style={{width: '400px' , color:'black' }}
+                                style={{width: '300px' , color:'black' }}
                             />
                         <Button raised accent ripple style={{ background:'red'  }} onClick={()=>this.changeState(2)}>ADD VEHICLE INFO</Button>
                         </form>
-
+                    </Card>
                  </div>
              )   
             }
@@ -117,19 +119,21 @@ import { Link } from 'react-router-dom';
             else if(this.state.activelog === 2){
                 return (
                   <div>
+                    <Card shadow={0} style={{width:'100%' , padding:'30px' , height:'500px'}}>   
                             <Textfield
                                 style={{fontSize:'60px'}}
                                 onChange={() => {}}
                                 label= "REG NO."
                                 maxLength=''
-                                style={{width: '400px' , color:'black' }}
+                                style={{width: '300px' , color:'black' }}
                             />
                             <br/>
-                            <label style={{fontSize:'0.3em'}}>UPLOAD RC : </label><br/>
-                            <input type='file' onChange ={ (event) =>(this.fileSelector(event))} ></input>
+                            <label style={{fontSize:'1.4em'}}>UPLOAD RC : </label><br/>
+                            <input style={{margin:'0 auto' , justifyContent:'center' , alignContent:'center' , fontSize:'0.7em'}} type='file' onChange ={ (event) =>(this.fileSelector(event))} ></input>
 
                             <br/>
                        <Button raised accent ripple  style={{ background:'red' }}> SUBMIT </Button>
+                        </Card>
                   </div>
                 )               
 
@@ -147,7 +151,11 @@ import { Link } from 'react-router-dom';
                  </header>       
 
              <div className='Sign-content'>
-                    {this.toggleinup()}         
+                    <Grid>
+                        <Cell col={12}>
+                        {this.toggleinup()} 
+                        </Cell>
+                    </Grid>
              </div>
         
             </div>
