@@ -86,7 +86,7 @@ import { Link } from 'react-router-dom';
                                 style={{fontSize:'60px'}}
                                 onChange={() => {}}
                                 label= "Good Name..."
-                                maxLength='10'
+                                maxLength='30'
                                 style={{width: '300px' , color:'black' }}
                             />
                             <br/>
