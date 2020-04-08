@@ -29,23 +29,25 @@ import Carousel from './Carousel'
 
            if(this.state.activelog===0) {
                return( 
-               <div>
-                <Card shadow={0} style={{width:'100%' , height:'500px'}}>   
+                <div>
                 <form className='sign-in-form'>
-                     <i style={{fontSize:'40px', color:'red',margin:'0 auto'}} className='fa fa-phone-square'></i>
-                     <Textfield
-                     style={{fontSize:'60px'}}
-                     onChange={() => {}}
-                     pattern="-?[0-9]*(\.[0-9]+)?"
-                     error="Input is not a number!"
-                     label="Contact Number..."
-                     maxLength='10'
-                     style={{width: '300px'}}
-                     
-                     />
 
+                    <h3>GATS Charging Station</h3><br/>
+                    <div className='input-box'>
+                    <i className='fa fa-phone'></i>
+                    <input type='tel'minLength='10' pattern="-?[0-9]*(\.[0-9]+)?" maxLength='10' placeholder='Enter your phone number'></input>
+                    <Button type='button' id='submitphone' onClick={()=> this.changeState(3)}> <i className='fa fa-arrow-right' ></i></Button>
+                    </div>
+                </form>
+            </div>
+               )
+           }
+
+           else if(this.state.activelog === 3 ){
+            return(
+                <div>
                      <h4> Enter verification code </h4>
-                    <div className='otp-boxes' style={{textAlign:'center' , justifyContent:'center'}}>
+                 <div className='otp-boxes' style={{textAlign:'center' , justifyContent:'center'}}>
                         <div style={{display:'flex' , alignItems:'center' }}>
                             <input className='otp-input' style={{width:'3rem', height:'3rem' , fontSize:'2rem' , textAlign:'center'}} maxLength='1'  ></input>
                         </div>
@@ -64,20 +66,21 @@ import Carousel from './Carousel'
                             <input className='otp-input' style={{width:'3rem', height:'3rem' , fontSize:'2rem' , textAlign:'center'}} maxLength='1' ></input>
                         </div>
 
-                     </div>
-                        <Button raised accent ripple style={{ background:'red' }} onClick={()=>this.changeState(1)}>SUBMIT</Button>
-                        <Link className='login-link'>Already have an Account ?</Link>
+                 </div>
+                 <Button raised accent ripple style={{ background:'red' }} onClick={()=>this.changeState(1)}>SUBMIT</Button>
+                 </div>
+            );
+        }
 
-                </form>
-                </Card>
-            </div>
-               )
-           }
+
+
+
+
+
 
            else if(this.state.activelog === 1){
              return (
                  <div className="addVehicleInfo">
-                      <Card shadow={0} style={{width:'100%' , padding:'30px' , height:'500px'}}>   
 
                             <form className="form-elements">
                             <Textfield
@@ -109,15 +112,13 @@ import Carousel from './Carousel'
                             />
                         <Button raised accent ripple style={{ background:'red'  }} onClick={()=>this.changeState(2)}>ADD VEHICLE INFO</Button>
                         </form>
-                    </Card>
                  </div>
              )   
             }
 
             else if(this.state.activelog === 2){
                 return (
-                  <div>
-                    <Card shadow={0} style={{width:'100%' , padding:'30px' , height:'500px'}}>   
+                  <div className = 'submit-page' >
                             <Textfield
                                 style={{fontSize:'60px'}}
                                 onChange={() => {}}
@@ -126,18 +127,20 @@ import Carousel from './Carousel'
                                 style={{width: '300px' , color:'black' }}
                             />
                             <br/>
-                            <label style={{fontSize:'1.4em'}}>UPLOAD RC : </label><br/>
-                            <input style={{margin:'0 auto' , justifyContent:'center' , alignContent:'center' , fontSize:'0.7em'}} type='file' onChange ={ (event) =>(this.fileSelector(event))} ></input>
-
+                            <label style={{fontSize:'18px' , textAlign:'center'}}>Upload RC : </label>
+                            <input style={{margin:'0 auto' , justifyContent:'center' , alignContent:'center' , fontSize:'0.2em'}} type='file' onChange ={ (event) =>(this.fileSelector(event))} ></input>
+                            <br/><br/>
+                            <select placeholder='place' style={{width:'100%'}}>
+                                <option>Select RC type</option>
+                                <option>option1</option>
+                                <option>option2</option>
+                            </select>
                             <br/>
                        <Button raised accent ripple  style={{ background:'red' }}> SUBMIT </Button>
-                        </Card>
                   </div>
                 )               
 
-               }
-
-        
+             }
         }
     
 
@@ -155,7 +158,7 @@ import Carousel from './Carousel'
                  </header>       
 
              <div className='Sign-content'>
-                    <Grid>
+                    <Grid className='main-grid'>
                         <Cell col={12}>
                         {this.toggleinup()} 
                         </Cell>
