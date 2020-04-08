@@ -1,14 +1,26 @@
 import React, { Component } from 'react'
 import './Logo.css'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 class First extends Component {
+    state = {
+        redirect:false
+    }
+    componentDidMount() {
+        this.id = setTimeout(() => this.setState({ redirect: true }), 2500)
+      }
+    
+      componentWillUnmount() {
+        clearTimeout(this.id)
+      }
+    
     render() {
         return (
-         <div>
+            this.state.redirect
+            ? <Redirect to="/sign" />
+        :<div>
             <div className='body'>
                 <div className='content-box'>
                 <img src='logo.jpg' alt='logo' />
-                <Link to='/sign' style={{color:'white' ,fontSize:'30px'}}>Sign-up</Link>
                 <h1> Smart Charging Station powered by GATS </h1>
                 </div>
             </div>

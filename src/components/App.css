@@ -1,88 +1,104 @@
-.Sign {
-  background-color: white;
+* {
+  box-sizing: border-box;
+}
+
+.sign-box {
   width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.sign-box .Sign {
+  /*
+  @media screen and (max-width:528px){
+      .logo-header{
+          img{
+              width: 25%;
+          }
+      }
+  }
+
+  @media screen and (max-width:1050px) {
+      .logo-header{
+          img{
+              width: 18%;
+          }
+      }
+  }
+  */
+  background-color: white;
+  width: 50%;
   height: 100%;
   position: fixed;
+  float: left;
 }
-
-.Sign .logo-header {
+.sign-box .Sign .logo-header {
   background-color: red;
+  width: 100%;
+  height: auto;
 }
-
-.Sign .logo-header img {
-  height: 100px;
-  width: 10%;
+.sign-box .Sign .logo-header img {
+  height: 60px;
+  width: 80px;
+  position: left;
 }
-
-@media screen and (max-width: 528px) {
-  .Sign .logo-header img {
-    width: 25%;
-  }
+.sign-box .Sign .logo-header .CompName {
+  display: inline-block;
+  color: white;
+  font-size: large;
+  margin: 17px 10px;
+  font-size-adjust: 0.6;
+  font-weight: bolder;
 }
-
-@media screen and (max-width: 1050px) {
-  .Sign .logo-header img {
-    width: 18%;
-  }
-}
-
-.Sign .Sign-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.sign-box .Sign .Sign-content {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  font-size: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 70px;
   height: 100%;
   margin: 0 auto;
   width: 50%;
   text-align: center;
 }
-
-.Sign .sign-in-form {
-  padding: 30px;
+.sign-box .Sign .sign-in-form {
+  padding: auto;
 }
-
-.Sign .otp-boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.sign-box .Sign .otp-boxes {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
-.Sign .otp-input {
+.sign-box .Sign .otp-input {
   border-style: double;
   border-radius: 25%;
-  margin: 0.2em;
+  margin: 0.15em;
   outline: none;
 }
-
-.Sign Button {
+.sign-box .Sign Button {
   display: block;
   margin: 40px auto;
 }
-
-.Sign .login-link {
+.sign-box .Sign .login-link {
   display: block;
   padding-top: 60px;
   text-decoration: none;
   color: black;
   font-weight: 500;
 }
-
-.Sign .login-link:hover {
+.sign-box .Sign .login-link:hover {
   text-decoration: underline;
   color: red;
+}
+.sign-box .slider {
+  width: 50%;
+  float: right;
+  height: 100vh;
+}
+.sign-box .slider img {
+  width: 100%;
+  height: 100vh;
+}
+.sign-box .slider .owl-theme .owl-dots {
+  display: none;
 }
 
 @media screen and (max-width: 485px) {
@@ -101,29 +117,10 @@
   .Sign .sign-in-form .login-link {
     padding-top: 0px;
   }
+
   .addVehicleInfo {
     background: red;
   }
 }
 
-.Caraousel .logo-header {
-  background-color: red;
-}
-
-.Caraousel .logo-header img {
-  height: 100px;
-  width: 10%;
-}
-
-@media screen and (max-width: 528px) {
-  .Caraousel .logo-header img {
-    width: 25%;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .Caraousel .logo-header img {
-    width: 18%;
-  }
-}
 /*# sourceMappingURL=App.css.map */

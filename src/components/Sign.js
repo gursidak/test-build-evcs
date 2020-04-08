@@ -4,9 +4,7 @@ import {Textfield , Button, Card, Grid, Cell} from 'react-mdl';
 import ReactMDL from 'react-mdl';
 // import OtpInput from 'react-otp-input';
 import { Link } from 'react-router-dom';
-
-
-
+import Carousel from './Carousel'
  class Sign extends Component {
    
     constructor(props){
@@ -34,7 +32,7 @@ import { Link } from 'react-router-dom';
                <div>
                 <Card shadow={0} style={{width:'100%' , height:'500px'}}>   
                 <form className='sign-in-form'>
-                     <i style={{fontSize:'40px', color:'red' , marginRight:'20px'}} className='fa fa-phone-square'></i>
+                     <i style={{fontSize:'40px', color:'red',margin:'0 auto'}} className='fa fa-phone-square'></i>
                      <Textfield
                      style={{fontSize:'60px'}}
                      onChange={() => {}}
@@ -144,10 +142,16 @@ import { Link } from 'react-router-dom';
     
 
     render() {
+        
         return (
+        <div className="sign-box">
+            <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
             <div className ='Sign'> 
                  <header className='logo-header'>
                      <img src='logo.jpg' alt='GATS-logo' />
+                    <div className='CompName'>
+                        GATS SCS
+                    </div>
                  </header>       
 
              <div className='Sign-content'>
@@ -156,11 +160,15 @@ import { Link } from 'react-router-dom';
                         {this.toggleinup()} 
                         </Cell>
                     </Grid>
-             </div>
-        
+             </div>      
             </div>
-
-     )
+            <div className="slider">
+                <Carousel/>                          
+            </div>
+            
+        </div>
+    )
+    
     }
 }
 
