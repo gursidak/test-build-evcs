@@ -1,3 +1,5 @@
+$redshade: #EC1B21;
+
 @mixin Center {
     display: flex;
     align-items: center;
@@ -10,7 +12,7 @@
 }
 
 $textcolor : white ;
-$bodycolor:#FF0015;
+$bodycolor: $redshade;
 
 .body{
     background-color : $bodycolor;

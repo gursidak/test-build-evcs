@@ -6,6 +6,7 @@ import Waiting from './Waiting';
 import AddVehicleInfo from './AddVehicleInfo';
 import FetchSubmitInfo from './FetchSubmitInfo';
 import caraousel from './caraousel';
+import MainView from './MainView';
 
 
 const Main = () => (
@@ -16,6 +17,7 @@ const Main = () => (
         <Route path='/AddVehicleInfo' component={AddVehicleInfo} />
         <Route path='/SubmitFetch' component={FetchSubmitInfo} />
         <Route path='/caraousel' component={caraousel} />
+        <Route path='/main' component={MainView} />
 
 
     </switch>

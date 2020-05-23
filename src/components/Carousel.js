@@ -15,8 +15,8 @@ export class carousel extends Component  {
                 loop
                 >
                     <div className=''><img src = 'logo.jpg'/></div>
-                    <div className='item'><img src = 'logo.jpg'/></div>
-                    <div className='item'><img src = 'logo.jpg'/></div>
+                    <div className='item'><img src ='logo.jpg'/></div>
+                    <div className='item'><img src ='logo.jpg' />></div>
                     <div className='item'><img src = 'logo.jpg'/></div>
                     <div className='item'><img src = 'logo.jpg'/></div>  
                 </OwlCarousel>
