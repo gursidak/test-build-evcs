@@ -8,7 +8,11 @@ class MainView extends Component {
         {key:1 , value:'Goyal Gas Station'},
         {key:3 , value:'Jha Gas Station'}
     ]
-   } 
+   }
+   
+   RenderList = () => {
+    return this.state.list.map((ele) => (<li key={ele.key} className='list-group-item'>{ele.value}</li>));
+    }
     render() {
         
     
@@ -37,9 +41,7 @@ class MainView extends Component {
                             <div className="page-content">
                                 <div className="card" style={{width: "100%" , textAlign:'center'}}>
                                  <ul className="list-group list-group-flush">
-                                        <li className="list-group-item">Cras justo odio</li>
-                                        <li className="list-group-item">Dapibus ac facilisis in</li>
-                                        <li className="list-group-item">Vestibulum at eros</li>
+                                    {this.RenderList()}
                                 </ul> 
                                 </div>
                             </div>
@@ -49,7 +51,8 @@ class MainView extends Component {
             </div>
          );
 }
+
+
 }
  
 export default MainView;
-
