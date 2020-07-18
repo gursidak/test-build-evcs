@@ -10,7 +10,7 @@ class ListModal extends Component {
     console.log(this.props.isOpen);
     return (
       <div>
-        <Modal onRequestClose={  this.props.isClose } isOpen={this.props.isOpen}  style={{ overlay:{background:'transparent' , zIndex: 1000} , content:{background : 'white' }  }}  >
+        <Modal onRequestClose={  this.props.isClose } isOpen={this.props.isOpen}  style={{ overlay:{background:'rgba(0, 0, 0, 0.7)' , zIndex: 1000} , content:{background : 'white' }  }}  >
           <div>
               <VendorCarousel />
             <div style={{textAlign:'center'}}>

@@ -2,6 +2,15 @@ import React, { Component } from 'react';
  import OwlCarousel from 'react-owl-carousel';
  import 'owl.carousel/dist/assets/owl.carousel.css';
  import 'owl.carousel/dist/assets/owl.theme.default.css';
+ import carousel1 from "./jordan.jpg"
+ import carousel2 from "./J.jpg" 
+
+ import "./App.css"
+ 
+const options = {
+    items: 8,
+};
+
 
 
 class VendorCarousel extends Component {
@@ -12,23 +21,23 @@ class VendorCarousel extends Component {
     render() { 
         return ( 
             <OwlCarousel
-                className="owl-theme"
-                autoplay loop
-                margin={5}
-                
-                items={2}
+                className="owl-carousel owl-theme"
+                autoplay  
+                margin={1}
+                // items={9}
                 autoWidth='true'
                 nav
+                {...options}
             >
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
-                <div class="item"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1c343usMa4cWIsAvowi7NzkFJXt9dWFmM4n78-eDc3vSJ3wKp&usqp=CAU" /> </div>
+                <div  className="img"> <img src={carousel1} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
 
                 </OwlCarousel>
          );
