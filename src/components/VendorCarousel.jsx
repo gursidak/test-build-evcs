@@ -3,7 +3,7 @@ import React, { Component } from 'react';
  import 'owl.carousel/dist/assets/owl.carousel.css';
  import 'owl.carousel/dist/assets/owl.theme.default.css';
  import carousel1 from "./jordan.jpg"
- import carousel2 from "./J.jpg" 
+ import carousel2 from "./jordan2.jpg" 
 
  import "./App.css"
  
@@ -23,21 +23,21 @@ class VendorCarousel extends Component {
             <OwlCarousel
                 className="owl-carousel owl-theme"
                 autoplay  
-                margin={1}
-                // items={9}
-                autoWidth='true'
-                nav
-                {...options}
+                margin={5}
+                items={9}
+                autoWidth='false'
+                nav="true"
+                // {...options}
             >
-                <div  className="img"> <img src={carousel1} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" /> </div>
-                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" /> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture"  width="150px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel2} alt="vendor-station-picture" width="100px" height="80px"/> </div>
+                <div  className="img"> <img  src={carousel1} alt="vendor-station-picture" width="100px" height="80px"/> </div>
 
                 </OwlCarousel>
          );

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Layout, Navigation, Header, Drawer, Content, List, ListItem, ListItemAction, ListItemContent, Icon, Button } from 'react-mdl';
+import { Layout, Navigation, Header, Drawer, Content, List, ListItem, ListItemAction, ListItemContent, Icon } from 'react-mdl';
 import ListModal from './ListModal'
 import { Card } from 'react-bootstrap'
 import './App.css';
-import AOS from 'aos';
+import MyProfile from './MyProfile'
 
 
 class MainView extends Component {
@@ -24,19 +24,33 @@ class MainView extends Component {
             ],
             isModalOpen: false,
             isToggle: false,
-            SelectedVendor: 0
+            SelectedVendor: 0,
+            activeComponent:1
         }
+        this.renderComponent = this.renderComponent.bind(this);
+        this.handleComponentLoading = this.handleComponentLoading.bind(this);
     }
 
-    componentDidMount() {
-        // or simply just AOS.init();
-        AOS.init({
-          // initialise with other settings
-          duration : 5000
-        });
+
+      renderComponent(){
+            if(this.state.activeComponent === 0){
+                return(
+                    <div>
+                        <List style={{ width: '70%' }}>
+                            {this.RenderList()}
+                        </List>
+                    </div>
+                )
+            }
+
+            else if (this.state.activeComponent === 1 ){
+                return (
+                    <div>
+                        <MyProfile />
+                    </div>
+                )
+            }
       }
-
-
 
     RenderList = () => {
         return this.state.list.map((vendor) => (
@@ -51,6 +65,10 @@ class MainView extends Component {
         ));
     }
 
+    handleComponentLoading(n){
+
+        this.setState({ currentPage : n }, () => {console.log("set state : ")});
+    }
 
 
     changeFocus = (eleKey) => {
@@ -88,7 +106,7 @@ class MainView extends Component {
                                     <a href="#">Link</a>
                                 </Navigation>
                             </Header>
-                        <Drawer style={{background:"rgba(0, 0, 0, 0.8)" , padding:"13px 13px" }}>
+                        <Drawer style={{background:"rgba(0, 0, 0, 0.9)" , padding:"13px 13px" }}>
                             <div className="card">
                                 <Card>
                                     <div className="class-content">
@@ -102,30 +120,25 @@ class MainView extends Component {
                             </div>
                             <div className="list-container" >
                                 <ul>
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-user"></i> My Profile</a></li>             <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-car"></i> My Vehicle</a></li>              <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-history"></i> My Trips</a></li>            <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-credit-card"></i> Payment</a></li>         <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-share-alt"></i> Share</a></li>             <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-address-card"></i> Contact Us</a></li>     <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-star"></i> Rate Us</a></li>                <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-cog"></i> Settings</a></li>                <hr className="sidebar-list-hr" />
-                                    <li className="nav-item"><a className="sidebar-links" href="#"><i className="fa fa-sign-out"></i> Logout</a></li>             <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(1)} } href=""> <i className="fa fa-user"></i> My Profile </a></li>           <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(2)} } to="/myvehicle"><i className="fa fa-car"></i> My Vehicle</a></li>      <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-history"></i> My Trips</a></li>            <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-credit-card"></i> Payment</a></li>         <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-share-alt"></i> Share</a></li>             <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-address-card"></i> Contact Us</a></li>     <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-star"></i> Rate Us</a></li>                <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-cog"></i> Settings</a></li>                <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-sign-out"></i> Logout</a></li>             <hr className="sidebar-list-hr" />
                                 </ul>
                             </div>
                         </Drawer>
                         <Content>
 
-                            <div aos- className="page-content">
-
-                                <List style={{ width: '70%' }}>
-                                    {this.RenderList()}
-
-                                </List>
-
+                            <div  className="page-content">
+                                {this.renderComponent()}
                                 < ListModal currentVendor={this.state.SelectedVendor} isClose={this.isModalClose} isOpen={this.state.isModalOpen} />
-                                {/* <Profile /> */}
                             </div>
+
                         </Content>
                     </Layout>
                 </div>

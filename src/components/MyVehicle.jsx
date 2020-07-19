@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 
-class Profile extends Component {
+class MyVehicle extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { rcNo , rcImage }
     }
     render() { 
         return ( 
-            <div id="Profile-container">
-
+            <div>
+                    
             </div>
-            
          );
     }
 }
  
-export default Profile;
+export default MyVehicle;
