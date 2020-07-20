@@ -4,6 +4,7 @@ import ListModal from './ListModal'
 import { Card } from 'react-bootstrap'
 import './App.css';
 import MyProfile from './MyProfile'
+import MyVehicle from './MyVehicle'
 
 
 class MainView extends Component {
@@ -25,7 +26,7 @@ class MainView extends Component {
             isModalOpen: false,
             isToggle: false,
             SelectedVendor: 0,
-            activeComponent:1
+            activeComponent:2
         }
         this.renderComponent = this.renderComponent.bind(this);
         this.handleComponentLoading = this.handleComponentLoading.bind(this);
@@ -33,7 +34,7 @@ class MainView extends Component {
 
 
       renderComponent(){
-            if(this.state.activeComponent === 0){
+            if(this.state.activeComponent == 0){
                 return(
                     <div>
                         <List style={{ width: '70%' }}>
@@ -43,11 +44,20 @@ class MainView extends Component {
                 )
             }
 
-            else if (this.state.activeComponent === 1 ){
+            else if (this.state.activeComponent == 1 ){
                 return (
                     <div>
                         <MyProfile />
                     </div>
+                )
+            }
+
+            else if(this.state.activeComponent === 2){
+                return (
+                    <div>
+                        <MyVehicle />    
+                    </div>
+
                 )
             }
       }
@@ -67,7 +77,7 @@ class MainView extends Component {
 
     handleComponentLoading(n){
 
-        this.setState({ currentPage : n }, () => {console.log("set state : ")});
+        this.setState({ activeComponent : n });
     }
 
 
@@ -120,8 +130,8 @@ class MainView extends Component {
                             </div>
                             <div className="list-container" >
                                 <ul>
-                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(1)} } href=""> <i className="fa fa-user"></i> My Profile </a></li>           <hr className="sidebar-list-hr" />
-                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(2)} } to="/myvehicle"><i className="fa fa-car"></i> My Vehicle</a></li>      <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(1)} } href="#"> <i className="fa fa-user"></i> My Profile </a></li>           <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(2)} } href="#"><i className="fa fa-car"></i> My Vehicle</a></li>      <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-history"></i> My Trips</a></li>            <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-credit-card"></i> Payment</a></li>         <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-share-alt"></i> Share</a></li>             <hr className="sidebar-list-hr" />

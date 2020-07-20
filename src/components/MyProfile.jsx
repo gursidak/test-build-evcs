@@ -37,7 +37,9 @@ class Profile extends Component {
             <div id="myprofile-container">
                 <img src={this.state.currentProfilePicture} alt="profile picture" id="profile-picture"  />
                 <br />
+
                 <div className="myprofile-imagebox">
+                    
                     <ImageUploader  setProfilePic={this.setProfilePicture} />
                 </div>
                 <div className="myprofile-textfields" style={{textAlign:"left"}} >

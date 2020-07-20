@@ -393,6 +393,43 @@ img{
 
 #myvehicle-container{
     text-Align:center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    scroll-behavior: initial;
+
+    h3{
+        color: red;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: underline;
+    }
+    
+    #vehicle-picture{
+        width: 200px;
+        border-radius: 25%;
+        border-top : 3px solid $redshade;
+        border-bottom : 3px solid $redshade;
+        padding: 4px;
+
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
 }
 
 
