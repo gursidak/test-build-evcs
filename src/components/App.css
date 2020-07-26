@@ -1,3 +1,26 @@
+.mdl-textfield__input {
+  border-bottom: 1px solid #EC1B21;
+}
+
+.evcsButton {
+  outline: none;
+  border-top: 5px solid #EC1B21;
+  border-bottom: 5px solid #EC1B21;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.9px;
+  margin-top: 20px;
+}
+
+.evcsButton:hover {
+  background-color: #EC1B21;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -57,6 +80,10 @@
   margin: 0 auto;
   width: 100%;
   text-align: center;
+}
+
+.sign-box .Sign .Sign-content .addVehicleInfo .form-elements .mdl-textfield__input {
+  border-bottom: 2px solid rgba(224, 168, 168, 0.9);
 }
 
 .sign-box .Sign .sign-in-form {
@@ -151,15 +178,11 @@
 }
 
 .sign-box .Sign .otp-input {
-  border-style: double;
+  border-style: solid;
+  border-color: #EC1B21;
   border-radius: 25%;
   margin: 0.15em;
   outline: none;
-}
-
-.sign-box .Sign Button {
-  display: block;
-  margin: 40px auto;
 }
 
 .sign-box .slider {
@@ -381,6 +404,7 @@
   border-bottom: 5px solid #EC1B21;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.9px;
 }
 
 #myprofile-container .evcs-button:hover, #myprofile-container button:hover {
@@ -389,7 +413,7 @@
   transition: background-color 300ms;
   font-weight: 600;
   font-size: 15px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 #myvehicle-container {
@@ -440,6 +464,7 @@
   border-bottom: 5px solid #EC1B21;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.9px;
 }
 
 #myvehicle-container button:hover {
@@ -448,7 +473,7 @@
   transition: background-color 300ms;
   font-weight: 600;
   font-size: 15px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 #myvehicle-container .addRC-form form h3 {
@@ -471,6 +496,7 @@
   border-bottom: 5px solid #EC1B21;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.9px;
   margin-top: 20px;
 }
 
@@ -480,6 +506,6 @@
   transition: background-color 300ms;
   font-weight: 600;
   font-size: 15px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=App.css.map */

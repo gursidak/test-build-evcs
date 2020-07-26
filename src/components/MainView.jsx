@@ -6,7 +6,6 @@ import './App.css';
 import MyProfile from './MyProfile'
 import MyVehicle from './MyVehicle'
 
-
 class MainView extends Component {
     
     constructor(props){
@@ -26,10 +25,13 @@ class MainView extends Component {
             isModalOpen: false,
             isToggle: false,
             SelectedVendor: 0,
-            activeComponent:2
+            activeComponent:0
         }
         this.renderComponent = this.renderComponent.bind(this);
         this.handleComponentLoading = this.handleComponentLoading.bind(this);
+        this.RenderList = this.RenderList.bind(this);
+        this.changeFocus = this.changeFocus.bind(this);
+        this.isModalOpen = this.isModalOpen.bind(this);
     }
 
 
@@ -62,7 +64,7 @@ class MainView extends Component {
             }
       }
 
-    RenderList = () => {
+    RenderList() {
         return this.state.list.map((vendor) => (
             < ListItem key={vendor.key} className='stationListItem' threeLine >
                 <img src={vendor.img} height="60px" width="80px" className="listItemImg" />
@@ -81,7 +83,7 @@ class MainView extends Component {
     }
 
 
-    changeFocus = (eleKey) => {
+    changeFocus(eleKey){
         console.log("eleKey", eleKey);
         const SelectedVendor = eleKey;
         this.setState({ SelectedVendor }, () => {
@@ -89,7 +91,7 @@ class MainView extends Component {
         })
     }
 
-    isModalOpen = () => {
+    isModalOpen(){
         console.log("inside IsmodelOpen");
         this.setState({ isModalOpen: true })
 

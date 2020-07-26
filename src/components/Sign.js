@@ -8,7 +8,7 @@ class Sign extends Component {
         super(props);
 
         this.state = {
-            activelog: 2,
+            activelog: 0,
             imageUploaded: null
         };
     }
@@ -63,7 +63,7 @@ class Sign extends Component {
                             <input className='otp-input' style={{ width: '3rem', height: '3rem', fontSize: '2rem', textAlign: 'center' }} maxLength='1' ></input>
                         </div>
                     </div>
-                    <Button raised accent ripple style={{ background: 'red' }} onClick={() => this.changeState(1)}>SUBMIT</Button>
+                    <button className="btn btn-danger evcsButton" onClick={() => this.changeState(1)}>SUBMIT</button>
                 </div>
             );
         }
@@ -73,6 +73,7 @@ class Sign extends Component {
                 <div className="addVehicleInfo">
                     <form className="form-elements">
                         <Textfield
+                            floatingLabel
                             style={{ fontSize: '60px' }}
                             onChange={() => { }}
                             label="Good Name..."
@@ -81,6 +82,7 @@ class Sign extends Component {
                         />
                         <br />
                         <Textfield
+                            floatingLabel
                             style={{ fontSize: '60px' }}
                             onChange={() => { }}
                             pattern="-?[0-9]*(\.[0-9]+)?"
@@ -92,14 +94,16 @@ class Sign extends Component {
                         />
                         <br />
                         <Textfield
+                            floatingLabel
                             style={{ fontSize: '60px' }}
                             onChange={() => { }}
                             label="EMAIL_ID..."
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                             error="enter a valid email-address"
-                            style={{ width: '300px', color: 'black' }}
+                            style={{ width: '300px'}}
                         />
-                        <Button raised accent ripple style={{ background: 'red' }} onClick={() => this.changeState(2)}>ADD VEHICLE INFO</Button>
+                        <br/>
+                        <button className="btn btn-danger evcsButton" onClick={() => this.changeState(2)}>ADD VEHICLE INFO</button>
                     </form>
                 </div>
             )
@@ -109,6 +113,7 @@ class Sign extends Component {
             return (
                 <div className='submit-page' >
                     <Textfield
+                        floatingLabel
                         style={{ fontSize: '60px' }}
                         onChange={() => { }}
                         label="REG NO."
@@ -116,7 +121,7 @@ class Sign extends Component {
                         style={{ width: '300px', color: 'black' }}
                     />
                     <br />
-                    <label style={{ fontSize: '18px', textAlign: 'center' }}>Upload RC : </label>
+                    <label style={{ fontSize: '18px', textAlign: 'center' }}>Upload RC : </label> <br/>
                     <input style={{ margin: '0 auto', justifyContent: 'center', alignContent: 'center', fontSize: '18px' }} type='file' onChange={(event) => (this.fileSelector(event))} ></input>
                     <br /><br />
                     <select placeholder='place' style={{ width: '100%' }}>
@@ -125,7 +130,7 @@ class Sign extends Component {
                         <option>option2</option>
                     </select>
                     <br />
-                    <Button raised accent ripple style={{ background: 'red' }}> SUBMIT </Button>
+                    <button className="btn btn-danger evcsButton" > SUBMIT </button>
                 </div>
             )
 
