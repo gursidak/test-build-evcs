@@ -148,7 +148,6 @@ class MainView extends Component {
                                 {this.renderComponent()}
                                 < ListModal currentVendor={this.state.SelectedVendor} isClose={this.isModalClose} isOpen={this.state.isModalOpen} />
                             </div>
-
                         </Content>
                     </Layout>
                 </div>

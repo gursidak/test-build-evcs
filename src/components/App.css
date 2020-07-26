@@ -375,7 +375,7 @@
   border-radius: 50%;
 }
 
-#myprofile-container button {
+#myprofile-container .evcs-button, #myprofile-container button {
   outline: none;
   border-top: 5px solid #EC1B21;
   border-bottom: 5px solid #EC1B21;
@@ -383,7 +383,7 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#myprofile-container button:hover {
+#myprofile-container .evcs-button:hover, #myprofile-container button:hover {
   background-color: #EC1B21;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
@@ -404,9 +404,10 @@
 
 #myvehicle-container h3 {
   color: red;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-decoration: underline;
+  font-weight: 300;
+  letter-spacing: 5px;
+  background-color: rgba(224, 168, 168, 0.9);
+  padding: 8px;
 }
 
 #myvehicle-container #vehicle-picture {
@@ -431,5 +432,54 @@
 
 #myvehicle-container tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+#myvehicle-container button {
+  outline: none;
+  border-top: 5px solid #EC1B21;
+  border-bottom: 5px solid #EC1B21;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#myvehicle-container button:hover {
+  background-color: #EC1B21;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+#myvehicle-container .addRC-form form h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 20px;
+}
+
+#myvehicle-container .addRC-form form .addRC-inputs {
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid rgba(224, 168, 168, 0.9);
+  text-align: center;
+}
+
+#myvehicle-container .addRC-form form button {
+  outline: none;
+  border-top: 5px solid #EC1B21;
+  border-bottom: 5px solid #EC1B21;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+
+#myvehicle-container .addRC-form form button:hover {
+  background-color: #EC1B21;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=App.css.map */

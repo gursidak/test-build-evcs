@@ -8,7 +8,7 @@ class Sign extends Component {
         super(props);
 
         this.state = {
-            activelog: 0,
+            activelog: 2,
             imageUploaded: null
         };
     }
@@ -117,7 +117,7 @@ class Sign extends Component {
                     />
                     <br />
                     <label style={{ fontSize: '18px', textAlign: 'center' }}>Upload RC : </label>
-                    <input style={{ margin: '0 auto', justifyContent: 'center', alignContent: 'center', fontSize: '0.2em' }} type='file' onChange={(event) => (this.fileSelector(event))} ></input>
+                    <input style={{ margin: '0 auto', justifyContent: 'center', alignContent: 'center', fontSize: '18px' }} type='file' onChange={(event) => (this.fileSelector(event))} ></input>
                     <br /><br />
                     <select placeholder='place' style={{ width: '100%' }}>
                         <option>Select RC type</option>
