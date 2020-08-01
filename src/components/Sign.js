@@ -59,6 +59,27 @@ class Sign extends Component {
             )
         }
 
+        else if (this.state.activelog === 1) {
+            return (
+                <div className="addVehicleInfo">
+                    <PersonalInfoForm phoneNo={this.state.mobileNo}  addValuesToState={this.addPersonalInfoToState} changeComponent={() => { this.changeState(2)} } />
+                </div>
+            )
+        }
+
+        else if (this.state.activelog === 2) {
+            return (
+                <div className='addRcPage' >
+                    <AddVehicleInfo getInfo={this.addRcInfoToState} />
+                    
+                    
+                    
+                </div>
+            )
+
+        }
+    
+
         else if (this.state.activelog === 3) {
             return (
                 <div>
@@ -87,25 +108,7 @@ class Sign extends Component {
             );
         }
 
-        else if (this.state.activelog === 1) {
-            return (
-                <div className="addVehicleInfo">
-                    <PersonalInfoForm phoneNo={this.state.mobileNo}  addValuesToState={this.addPersonalInfoToState} changeComponent={() => { this.changeState(2)} } />
-                </div>
-            )
-        }
 
-        else if (this.state.activelog === 2) {
-            return (
-                <div className='addRcPage' >
-                    <AddVehicleInfo getInfo={this.addRcInfoToState} />
-                    
-                    
-                    
-                </div>
-            )
-
-        }
     }
 
     render() {

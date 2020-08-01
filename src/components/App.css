@@ -466,4 +466,15 @@
   font-weight: 600;
   margin-top: 20px;
 }
+
+.bookings #daysPendingIcon {
+  color: red;
+  font-size: 22px;
+}
+
+.bookings #paymentDoneIcon {
+  color: green;
+  margin: 6px;
+  font-size: 22px;
+}
 /*# sourceMappingURL=App.css.map */

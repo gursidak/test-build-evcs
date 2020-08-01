@@ -282,7 +282,23 @@ img{
 
     #main-header{
         background-color: $redshade;
+        // .navbarLinks{
+            
+        //     font-weight: 600;
+        //     &:hover{
+        //         text-decoration:underline;
+        //         transition: text-decoration 5s;
+        //     }
+        // }
     }
+    .navbarLinks
+    {
+        &:hover{
+            
+        }
+ 
+    }
+
 
     display: block;
     // margin: "0px auto";
@@ -291,6 +307,10 @@ img{
         margin: 0 auto;
         width: 50%;
     }
+
+    
+
+
     .card{
         text-align: center;
         background-color:transparent;
@@ -474,6 +494,24 @@ img{
     }
 }
 
+
+// Bookings Component Scss
+
+
+.bookings{
+    
+    #daysPendingIcon{
+        color:red;
+        font-size: 22px;
+
+    }
+
+    #paymentDoneIcon{
+        color: green;
+        margin: 6px;
+        font-size: 22px;
+    }
+}
 
 
 
