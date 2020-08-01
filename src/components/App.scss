@@ -293,9 +293,15 @@ img{
     }
     .navbarLinks
     {
+        font-weight: 600;
         &:hover{
-            
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 1);
+            color: $redshade;
+            transition: background-color 0.7s ease-out;
+        
         }
+
  
     }
 
@@ -500,6 +506,8 @@ img{
 
 .bookings{
     
+
+    padding: 50px;
     #daysPendingIcon{
         color:red;
         font-size: 22px;

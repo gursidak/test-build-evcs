@@ -282,6 +282,18 @@
   background-color: #EC1B21;
 }
 
+.demo-big-content .navbarLinks {
+  font-weight: 600;
+}
+
+.demo-big-content .navbarLinks:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #EC1B21;
+  -webkit-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
+}
+
 .demo-big-content .sidebar-list-hr {
   text-align: center;
   margin: 0 auto;
@@ -465,6 +477,10 @@
   letter-spacing: 0.9px;
   font-weight: 600;
   margin-top: 20px;
+}
+
+.bookings {
+  padding: 50px;
 }
 
 .bookings #daysPendingIcon {
