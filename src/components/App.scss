@@ -278,33 +278,25 @@ img{
     }
 }
 
-.demo-big-content{
+.mainViewWrapper{
 
     #main-header{
         background-color: $redshade;
-        // .navbarLinks{
-            
-        //     font-weight: 600;
-        //     &:hover{
-        //         text-decoration:underline;
-        //         transition: text-decoration 5s;
-        //     }
-        // }
-    }
+
+    
     .navbarLinks
     {
-        font-weight: 600;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        font-size: 13px;
         &:hover{
-            text-decoration: none;
-            background-color: rgba(255, 255, 255, 1);
-            color: $redshade;
-            transition: background-color 0.7s ease-out;
+            text-decoration: underline;
         
         }
 
  
     }
-
+}
 
     display: block;
     // margin: "0px auto";
@@ -317,30 +309,16 @@ img{
     
 
 
-    .card{
-        text-align: center;
-        background-color:transparent;
-        outline:none;
-        box-shadow: none;
-        .card{
-            .class-content{
-                #sidebar-img{
-                    border-radius: 70% ;
-                    padding: 4px;
-                    width: 180px;
-                    height: 170px;
-                
-                }
-                .card-body{
-                    color:$redshade;
-                    padding: 0px;
-                    margin: 0px;
-                }
-                .card-title{
-                    font-weight: 600;
-                    padding-top: 10px;
-                }
+
+    .class-content{
+            #sidebarImg{
+                border-radius: 10% ;
+                padding: 0px;
+                width: 30px;
+                height: 30px;
+            
             }
+ 
         }
     }
     .list-container{

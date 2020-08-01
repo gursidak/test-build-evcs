@@ -274,33 +274,31 @@
   margin: 10px;
 }
 
-.demo-big-content {
+.mainViewWrapper {
   display: block;
 }
 
-.demo-big-content #main-header {
+.mainViewWrapper #main-header {
   background-color: #EC1B21;
 }
 
-.demo-big-content .navbarLinks {
-  font-weight: 600;
+.mainViewWrapper #main-header .navbarLinks {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 13px;
 }
 
-.demo-big-content .navbarLinks:hover {
-  text-decoration: none;
-  background-color: white;
-  color: #EC1B21;
-  -webkit-transition: background-color 0.7s ease-out;
-  transition: background-color 0.7s ease-out;
+.mainViewWrapper #main-header .navbarLinks:hover {
+  text-decoration: underline;
 }
 
-.demo-big-content .sidebar-list-hr {
+.mainViewWrapper .sidebar-list-hr {
   text-align: center;
   margin: 0 auto;
   width: 50%;
 }
 
-.demo-big-content .card {
+.mainViewWrapper .card {
   text-align: center;
   background-color: transparent;
   outline: none;
@@ -308,47 +306,47 @@
           box-shadow: none;
 }
 
-.demo-big-content .card .card .class-content #sidebar-img {
-  border-radius: 70%;
-  padding: 4px;
-  width: 180px;
-  height: 170px;
+.mainViewWrapper .card .card .class-content #sidebar-img {
+  border-radius: 10%;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
 }
 
-.demo-big-content .card .card .class-content .card-body {
+.mainViewWrapper .card .card .class-content .card-body {
   color: #EC1B21;
   padding: 0px;
   margin: 0px;
 }
 
-.demo-big-content .card .card .class-content .card-title {
+.mainViewWrapper .card .card .class-content .card-title {
   font-weight: 600;
   padding-top: 10px;
 }
 
-.demo-big-content .list-container {
+.mainViewWrapper .list-container {
   margin-top: 10px;
 }
 
-.demo-big-content .list-container ul {
+.mainViewWrapper .list-container ul {
   text-align: center;
   margin: 0px 0px 0px;
   padding: 0px;
 }
 
-.demo-big-content .list-container .nav-item {
+.mainViewWrapper .list-container .nav-item {
   list-style: none;
   padding: 15px;
 }
 
-.demo-big-content .list-container .nav-item .sidebar-links {
+.mainViewWrapper .list-container .nav-item .sidebar-links {
   color: grey;
   -webkit-text-decoration: solid;
           text-decoration: solid;
   font-size: medium;
 }
 
-.demo-big-content .list-container .nav-item .sidebar-links:hover {
+.mainViewWrapper .list-container .nav-item .sidebar-links:hover {
   color: red;
   font-weight: 900;
   font-size: 22px;
@@ -358,7 +356,7 @@
           transition-timing-function: ease-out;
 }
 
-.demo-big-content .list-container .nav-item .sidebar-links .fa {
+.mainViewWrapper .list-container .nav-item .sidebar-links .fa {
   color: red;
   padding-right: 5px;
   font-size: 30px;

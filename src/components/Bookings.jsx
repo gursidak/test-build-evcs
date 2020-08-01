@@ -98,7 +98,7 @@ class Bookings extends Component {
     render() {
         return (
             <div className="demo-tabs">
-                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
+                <Tabs fixedTabs={true} activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
                     <Tab  >Past</Tab>
                     <Tab  >Active</Tab>
                 </Tabs>

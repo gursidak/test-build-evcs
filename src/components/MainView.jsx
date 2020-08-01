@@ -117,25 +117,24 @@ class MainView extends Component {
     render() {
         return (
             <div className='MainView'>
-                <div className="demo-big-content" >
+                <div className="mainViewWrapper" >
                     <Layout fixedHeader  >
                             <Header id="main-header" title="EVCS" scroll>
                                 <Navigation>
+                                    <a className="navbarLinks" onClick={ ()=>{ this.handleComponentLoading(0) } } href="#">HOME</a>
                                     <a className="navbarLinks" onClick={ () => this.handleComponentLoading(3) } href="#">BOOKINGS</a>
                                     <a className="navbarLinks" href="#">CHARGING STATUS</a>
                                 </Navigation>
                             </Header>
-                        <Drawer style={{background:"rgba(0, 0, 0, 0.9)" , padding:"13px 13px" }}>
+                        <Drawer style={{background:"rgba(255, 255, 255, 0.9)" , padding:"13px 13px" }}>
                             <div className="card">
-                                <Card>
+                                {/* <Card> */}
                                     <div className="class-content">
-                                        <Card.Img id="sidebar-img" variant="top" src="logo.jpg" fluid />
-                                        <Card.Body id="sidebar-userinfo" >
-                                            <Card.Title>Shivam Jha</Card.Title>
-                                            <Card.Text>Gatsby_Operator@gmail.com</Card.Text>
-                                        </Card.Body>
+                                        <img id="sidebarImg" variant="top" src="logo.jpg"  />
+                                            <h5>Gursidak Singh</h5>
+                                            <p>Gatsby_Operator@gmail.com</p>
                                     </div>
-                                </Card>
+                                {/* </Card> */}
                             </div>
                             <div className="list-container" >
                                 <ul>
