@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Layout, Navigation, Header, Drawer, Content, List, ListItem, ListItemAction, ListItemContent, Icon } from 'react-mdl';
 import ListModal from './ListModal'
-import { Card } from 'react-bootstrap'
 import './App.css';
 import MyProfile from './MyProfile'
 import MyVehicle from './MyVehicle'
@@ -127,15 +126,11 @@ class MainView extends Component {
                                 </Navigation>
                             </Header>
                         <Drawer style={{background:"rgba(255, 255, 255, 0.9)" , padding:"13px 13px" }}>
-                            <div className="card">
-                                {/* <Card> */}
                                     <div className="class-content">
                                         <img id="sidebarImg" variant="top" src="logo.jpg"  />
                                             <h5>Gursidak Singh</h5>
                                             <p>Gatsby_Operator@gmail.com</p>
                                     </div>
-                                {/* </Card> */}
-                            </div>
                             <div className="list-container" >
                                 <ul>
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(1)} } href="#"> <i className="fa fa-user"></i> My Profile </a></li>           <hr className="sidebar-list-hr" />

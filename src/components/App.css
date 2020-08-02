@@ -298,55 +298,44 @@
   width: 50%;
 }
 
-.mainViewWrapper .card {
+.mainViewWrapper .class-content {
   text-align: center;
-  background-color: transparent;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
-.mainViewWrapper .card .card .class-content #sidebar-img {
+.mainViewWrapper .class-content #sidebarImg {
   border-radius: 10%;
   padding: 0px;
-  width: 30px;
-  height: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 5px;
+  outline: none;
 }
 
-.mainViewWrapper .card .card .class-content .card-body {
-  color: #EC1B21;
-  padding: 0px;
-  margin: 0px;
-}
-
-.mainViewWrapper .card .card .class-content .card-title {
-  font-weight: 600;
-  padding-top: 10px;
-}
-
-.mainViewWrapper .list-container {
+.list-container {
   margin-top: 10px;
 }
 
-.mainViewWrapper .list-container ul {
+.list-container ul {
   text-align: center;
   margin: 0px 0px 0px;
   padding: 0px;
 }
 
-.mainViewWrapper .list-container .nav-item {
+.list-container .nav-item {
   list-style: none;
   padding: 15px;
 }
 
-.mainViewWrapper .list-container .nav-item .sidebar-links {
+.list-container .nav-item .sidebar-links {
   color: grey;
   -webkit-text-decoration: solid;
           text-decoration: solid;
   font-size: medium;
 }
 
-.mainViewWrapper .list-container .nav-item .sidebar-links:hover {
+.list-container .nav-item .sidebar-links:hover {
   color: red;
   font-weight: 900;
   font-size: 22px;
@@ -356,7 +345,7 @@
           transition-timing-function: ease-out;
 }
 
-.mainViewWrapper .list-container .nav-item .sidebar-links .fa {
+.list-container .nav-item .sidebar-links .fa {
   color: red;
   padding-right: 5px;
   font-size: 30px;

@@ -112,8 +112,3 @@ class Bookings extends Component {
 
 export default Bookings;
 
-
-
-
-// onClick={ ()=>{this.setState({ activeContent : 1  });} }
-// onClick={ ()=>{this.setState({ activeContent : 2  });} }

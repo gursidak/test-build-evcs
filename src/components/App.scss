@@ -5,11 +5,13 @@ $redshade : #EC1B21;
     background-color:$redshade;
     letter-spacing: 0.9px;
     font-weight: 600;
+    
 }
 
 .evcsButton{
     @include evcs-button();
     margin-top: 20px;
+    // font-size:20px;
 }
 
 
@@ -306,16 +308,20 @@ img{
         width: 50%;
     }
 
-    
-
-
-
     .class-content{
+
+        text-align: center;
+    
             #sidebarImg{
                 border-radius: 10% ;
                 padding: 0px;
-                width: 30px;
-                height: 30px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 2px solid black;
+                padding: 5px;
+                outline: none;
+                
             
             }
  
@@ -352,7 +358,7 @@ img{
         }
     }
     
-}  
+  
 
 
 
