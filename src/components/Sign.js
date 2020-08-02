@@ -55,7 +55,7 @@ class Sign extends Component {
         if (this.state.activelog === 0) {
             return (
                 <div>
-                    <form required className='sign-in-form' onSubmit={() => this.changeState(3)}>
+                    <form required className='sign-in-form' onSubmit={() => this.changeState(1)}>
                         <h3>GATS Charging Station</h3><br />
                         <div className='input-box'>
                             <i className='fa fa-phone'></i>
@@ -67,23 +67,6 @@ class Sign extends Component {
             )
         }
 
-        else if (this.state.activelog === 2) {
-            return (
-                <div className="addVehicleInfo">
-                    <PersonalInfoForm phoneNo={this.state.mobileNo}  addValuesToState={this.addPersonalInfoToState} changeComponent={() => { this.changeState(3)} } />
-                </div>
-            )
-        }
-
-        else if (this.state.activelog === 4) {
-            return (
-                <div className='addRcPage' >
-                    <AddVehicleInfo getInfo={this.addRcInfoToState} /> 
-                </div>
-            )
-
-        }
-    
 
         else if (this.state.activelog === 1) {
             return (
@@ -113,6 +96,14 @@ class Sign extends Component {
             );
         }
 
+        else if (this.state.activelog === 2) {
+            return (
+                <div className="addVehicleInfo">
+                    <PersonalInfoForm phoneNo={this.state.mobileNo}  addValuesToState={this.addPersonalInfoToState} changeComponent={() => { this.changeState(3)} } />
+                </div>
+            )
+        }
+
 
         else if (this.state.activelog === 3){
             return(
@@ -122,6 +113,17 @@ class Sign extends Component {
 
             );
         }
+
+
+        else if (this.state.activelog === 4) {
+            return (
+                <div className='addRcPage' >
+                    <AddVehicleInfo getInfo={this.addRcInfoToState} /> 
+                </div>
+            )
+
+        }
+    
 
 
     }
