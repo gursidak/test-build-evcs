@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
 import { Button, Grid, Cell } from 'react-mdl';
-import Carousel from './Carousel'
+import Carousel from './Carousel';
 import PersonalInfoForm from './PersonalInfoForm';
 import AddVehicleInfo from './AddVehicleInfo.jsx'
 import ChargerType from './ChargerType';
@@ -123,8 +123,6 @@ class Sign extends Component {
             )
 
         }
-    
-
 
     }
 

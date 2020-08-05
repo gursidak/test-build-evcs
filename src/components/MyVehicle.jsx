@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AddVehicleInfo from './AddVehicleInfo.jsx';
 
 var rclist =[];
 class MyVehicle extends Component {
@@ -90,7 +91,8 @@ class MyVehicle extends Component {
         <button onClick={ () => { this.setState({ showform:1  }); }} className="btn btn-danger">Add RC</button>
         
         <div className="addRC-form" style={{display: this.state.showform ? "block" : "none"}} >
-        <form>
+          <AddVehicleInfo />
+        {/* <form>
             <h3>Enter RC Number</h3>
             <input placeholder="Enter RC Number Here" onChange={this.handleNewRCnumber} className="addRC-inputs" type="text" />
             <br/>
@@ -98,7 +100,7 @@ class MyVehicle extends Component {
             <input className="addRC-inputs" type="file" onChange={this.fileSelector} />
             <br />
             <button onClick={ () => { this.setState({ showform : 0 }); this.addRC(); } } className="btn btn-danger" >Verify and Add</button>
-        </form> 
+        </form>  */}
         </div>
         </div>
          );

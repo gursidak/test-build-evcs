@@ -5,7 +5,7 @@ import './App.css';
 import MyProfile from './MyProfile'
 import MyVehicle from './MyVehicle'
 import Bookings from './Bookings';
-
+import History from './History.jsx';
 class MainView extends Component {
     
     constructor(props){
@@ -25,7 +25,7 @@ class MainView extends Component {
             isModalOpen: false,
             isToggle: false,
             SelectedVendor: 0,
-            activeComponent:3
+            activeComponent:4
         }
         this.renderComponent = this.renderComponent.bind(this);
         this.handleComponentLoading = this.handleComponentLoading.bind(this);
@@ -42,6 +42,7 @@ class MainView extends Component {
                         <List style={{ width: '70%' }}>
                             {this.RenderList()}
                         </List>
+                        <History />
                     </div>
                 )
             }
@@ -67,6 +68,14 @@ class MainView extends Component {
                 return(
                     <div>
                         <Bookings />
+                    </div>
+                )
+            }
+
+            else if(this.state.activeComponent == 4){
+                return(
+                    <div>
+                        <History />
                     </div>
                 )
             }
@@ -137,7 +146,7 @@ class MainView extends Component {
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(2)} } href="#"><i className="fa fa-car"></i> My Vehicle</a></li>      <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-history"></i> My Trips</a></li>            <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-credit-card"></i> Payment</a></li>         <hr className="sidebar-list-hr" />
-                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-share-alt"></i> Share</a></li>             <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-history -alt"></i> History</a></li>             <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-address-card"></i> Contact Us</a></li>     <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-star"></i> Rate Us</a></li>                <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-cog"></i> Settings</a></li>                <hr className="sidebar-list-hr" />
