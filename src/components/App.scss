@@ -411,6 +411,13 @@ img{
     }
         
 
+#historyContainer{
+    padding: 40px;
+    #paymentDoneIcon{
+        color: green;
+        font-size: 22px;
+    }
+}
 
 
 #myvehicle-container{
@@ -498,12 +505,10 @@ img{
 
     }
 
-    #paymentDoneIcon{
-        color: green;
-        margin: 6px;
-        font-size: 22px;
-    }
 }
+
+
+
 
 
 

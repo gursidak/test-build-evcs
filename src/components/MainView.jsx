@@ -5,7 +5,7 @@ import './App.css';
 import MyProfile from './MyProfile'
 import MyVehicle from './MyVehicle'
 import Bookings from './Bookings';
-import History from './History.jsx';
+import History from './History'
 class MainView extends Component {
     
     constructor(props){
@@ -47,7 +47,7 @@ class MainView extends Component {
                 )
             }
 
-            else if (this.state.activeComponent == 1 ){
+            else if (this.state.activeComponent === 1 ){
                 return (
                     <div>
                         <MyProfile />
@@ -64,7 +64,7 @@ class MainView extends Component {
                 )
             }
 
-            else if(this.state.activeComponent == 3){
+            else if(this.state.activeComponent === 3){
                 return(
                     <div>
                         <Bookings />
@@ -72,7 +72,7 @@ class MainView extends Component {
                 )
             }
 
-            else if(this.state.activeComponent == 4){
+            else if(this.state.activeComponent === 4){
                 return(
                     <div>
                         <History />

@@ -395,6 +395,15 @@
   font-weight: 600;
 }
 
+#historyContainer {
+  padding: 40px;
+}
+
+#historyContainer #paymentDoneIcon {
+  color: green;
+  font-size: 22px;
+}
+
 #myvehicle-container {
   text-Align: center;
   width: 80%;
@@ -472,12 +481,6 @@
 
 .bookings #daysPendingIcon {
   color: red;
-  font-size: 22px;
-}
-
-.bookings #paymentDoneIcon {
-  color: green;
-  margin: 6px;
   font-size: 22px;
 }
 /*# sourceMappingURL=App.css.map */
