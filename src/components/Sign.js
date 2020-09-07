@@ -6,8 +6,6 @@ import PersonalInfoForm from './PersonalInfoForm';
 import AddVehicleInfo from './AddVehicleInfo.jsx'
 import ChargerType from './ChargerType';
 
-import BUTTON from './Shiv'
-
 class Sign extends Component {
     constructor(props) {
         super(props);
@@ -94,7 +92,6 @@ class Sign extends Component {
                         </div>
                     </div>
                     <button className="btn btn-danger evcsButton" onClick={() => this.changeState(2)}>SUBMIT</button>
-                    <br/><BUTTON/>
                 </div>
             );
         }
