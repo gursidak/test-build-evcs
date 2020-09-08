@@ -25,7 +25,7 @@ class MainView extends Component {
             isModalOpen: false,
             isToggle: false,
             SelectedVendor: 0,
-            activeComponent:4
+            activeComponent:1
         }
         this.renderComponent = this.renderComponent.bind(this);
         this.handleComponentLoading = this.handleComponentLoading.bind(this);

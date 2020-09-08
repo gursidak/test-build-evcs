@@ -26,6 +26,8 @@ class ImageUpload extends React.Component {
                 onChange={this.onDrop}
                 imgExtension={[".jpg" , ".png" , ".jpeg"]}
                 maxFileSize={5242880}
+                buttonStyles={{color:"white" , borderRadius:"0px"}}
+                withPreview={true}
             />
         </div>
         );

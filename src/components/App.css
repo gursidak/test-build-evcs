@@ -1,6 +1,6 @@
 .evcsButton {
   outline: none;
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   letter-spacing: 0.9px;
   font-weight: 600;
   margin-top: 20px;
@@ -36,7 +36,7 @@
 }
 
 .sign-box .Sign .logo-header {
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   width: 100%;
   height: auto;
 }
@@ -52,7 +52,7 @@
   color: white;
   font-size: large;
   margin: 17px 10px;
-  font-size-adjust: 0.60;
+  font-size-adjust: 0.6;
   font-weight: bolder;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .sign-box .Sign .sign-in-form h3 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -98,17 +98,17 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: 2px solid #EC1B21;
+  border: 2px solid #ec1b21;
   margin: 0 auto;
   padding: 0px;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Comic Neue", cursive;
 }
 
 .sign-box .Sign .sign-in-form .input-box .fa-phone {
   padding: 5px;
   margin: 3px;
   font-size: 35px;
-  color: #EC1B21;
+  color: #ec1b21;
 }
 
 .sign-box .Sign .sign-in-form .input-box ::-webkit-input-placeholder {
@@ -143,19 +143,19 @@
 }
 
 .sign-box .Sign .sign-in-form .input-box:visited {
-  border: 2px solid #EC1B21;
+  border: 2px solid #ec1b21;
 }
 
 .sign-box .Sign #submitphone {
   margin: auto;
   font-size: 25px;
   height: 51px;
-  color: #EC1B21;
+  color: #ec1b21;
   padding: 0px;
 }
 
 .sign-box .Sign #submitphone:hover {
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   color: white;
 }
 
@@ -170,10 +170,12 @@
 
 .sign-box .Sign .otp-input {
   border-style: solid;
-  border-color: #EC1B21;
   border-radius: 25%;
   margin: 0.15em;
   outline: none;
+  font-size: 65%;
+  padding-top: 6px;
+  height: 40px;
 }
 
 .sign-box .slider {
@@ -264,8 +266,8 @@
   transition: color 0.1s linear;
   font-size: 21px;
   letter-spacing: 1px;
-  -webkit-transition: font-size,letter-spacing 250ms;
-  transition: font-size,letter-spacing 250ms;
+  -webkit-transition: font-size, letter-spacing 250ms;
+  transition: font-size, letter-spacing 250ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
 }
@@ -279,7 +281,7 @@
 }
 
 .mainViewWrapper #main-header {
-  background-color: #EC1B21;
+  background-color: #ec1b21;
 }
 
 .mainViewWrapper #main-header .navbarLinks {
@@ -352,10 +354,6 @@
 }
 
 #myprofile-container {
-  width: 70%;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   padding: 40px;
 }
@@ -366,17 +364,7 @@
   z-index: 1000;
 }
 
-#myprofile-container .myprofile-imagebox {
-  border-radius: 1px;
-  padding: 0.1px;
-  background-color: rgba(0, 0, 0, 0.9);
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-
-#myprofile-container .myprofile-textfields {
+#myprofile-container .row-styles {
   margin-top: 50px;
   margin-bottom: 50px;
   padding-left: 30px;
@@ -388,9 +376,10 @@
   border-radius: 50%;
 }
 
-#myprofile-container .evcs-button, #myprofile-container button {
+#myprofile-container .evcs-button,
+#myprofile-container button {
   outline: none;
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   letter-spacing: 0.9px;
   font-weight: 600;
 }
@@ -405,7 +394,7 @@
 }
 
 #myvehicle-container {
-  text-Align: center;
+  text-align: center;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -425,8 +414,8 @@
 #myvehicle-container #vehicle-picture {
   width: 200px;
   border-radius: 25%;
-  border-top: 3px solid #EC1B21;
-  border-bottom: 3px solid #EC1B21;
+  border-top: 3px solid #ec1b21;
+  border-bottom: 3px solid #ec1b21;
   padding: 4px;
 }
 
@@ -436,7 +425,8 @@
   width: 100%;
 }
 
-#myvehicle-container td, #myvehicle-container th {
+#myvehicle-container td,
+#myvehicle-container th {
   border: 1px solid #dddddd;
   text-align: center;
   padding: 8px;
@@ -448,7 +438,7 @@
 
 #myvehicle-container button {
   outline: none;
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   letter-spacing: 0.9px;
   font-weight: 600;
 }
@@ -469,10 +459,10 @@
 
 #myvehicle-container .addRC-form form button {
   outline: none;
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   letter-spacing: 0.9px;
   font-weight: 600;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .bookings {
@@ -482,5 +472,10 @@
 .bookings #daysPendingIcon {
   color: red;
   font-size: 22px;
+}
+
+.otp {
+  height: 14px;
+  font-size: small;
 }
 /*# sourceMappingURL=App.css.map */

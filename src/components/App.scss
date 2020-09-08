@@ -1,524 +1,456 @@
-$redshade : #EC1B21; 
+$redshade: #ec1b21;
 
 @mixin evcs-button {
-    outline: none;
-    background-color:$redshade;
-    letter-spacing: 0.9px;
-    font-weight: 600;
-    
+  outline: none;
+  background-color: $redshade;
+  letter-spacing: 0.9px;
+  font-weight: 600;
 }
 
-.evcsButton{
-    @include evcs-button();
-    margin-top: 20px;
-    // font-size:20px;w
+.evcsButton {
+  @include evcs-button();
+  margin-top: 20px;
+  // font-size:20px;w
 }
 
-
-.evcsInput{
-    width : 280px;
-    display : block;
-    height : 40px;
-    font-size : 15px;
-    margin : 18px;
-    margin-left: auto;
-    margin-right:auto;
+.evcsInput {
+  width: 280px;
+  display: block;
+  height: 40px;
+  font-size: 15px;
+  margin: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-*{
-    box-sizing: border-box;
- 
+* {
+  box-sizing: border-box;
 }
 
 @mixin header {
-
-.logo-header{
+  .logo-header {
     background-color: $redshade;
-    width:100%;
-    height:auto;
-
-img{ 
-    height:60px;
-    width:80px;
-    position: left;
-}
- .CompName {
-    display: inline-block;
-    color: white;
-    font-size: large;
-    margin: 17px 10px;
-    font-size-adjust: 0.60;
-    font-weight: bolder;
-}
-
-
-}
-
-}
-
-
-
-.sign-box{
     width: 100%;
-    height: 100vh;
-    position: relative;
-    
+    height: auto;
 
- .Sign{
+    img {
+      height: 60px;
+      width: 80px;
+      position: left;
+    }
+    .CompName {
+      display: inline-block;
+      color: white;
+      font-size: large;
+      margin: 17px 10px;
+      font-size-adjust: 0.6;
+      font-weight: bolder;
+    }
+  }
+}
+
+.sign-box {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .Sign {
     @include header();
     background-color: white;
     width: 50%;
     height: 100%;
     position: fixed;
-    float:left;
+    float: left;
 
-    .Sign-content{
+    .Sign-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      font-size: 4em;
+      height: 100%;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    .sign-in-form {
+      padding: auto;
+      width: 100%;
+
+      h3 {
+        font-family: "Quicksand", sans-serif;
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      .input-box {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: row;
-        font-size: 4em;        
-        height: 100%;
+        width: fit-content;
+        border: 2px solid $redshade;
         margin: 0 auto;
-        width:100%;
-        text-align: center;    
+        padding: 0px;
+        font-family: "Comic Neue", cursive;
 
-   
-    }
-
-
-    .sign-in-form{
-
-        padding: auto;
-        width: 100%;
-
-
-
-        h3{
-            font-family: 'Quicksand', sans-serif;
-            color: rgba(0, 0, 0, 0.9);
-        }   
-                 
-        .input-box{
-            display:flex;
-            flex-direction: row;
-            width: fit-content;
-            border: 2px solid $redshade;
-            margin: 0 auto;
-            padding: 0px;
-            font-family: 'Comic Neue', cursive;
-
-            .fa-phone{
-                padding: 5px;
-                margin: 3px;
-                font-size: 35px;
-                color: $redshade ;
-              }
-
-            ::placeholder{
-                font-weight: 500;
-                text-align: center;
-            }
-
-            input{
-                outline: none;
-                font-size: 1.5rem;
-                width: fit-content;
-                // text-align: center;
-                padding: 10px 20px;
-                border: none;
-                text-align: left;
-            } 
-
-            &:visited{
-                border: 2px solid $redshade;
-            }
+        .fa-phone {
+          padding: 5px;
+          margin: 3px;
+          font-size: 35px;
+          color: $redshade;
         }
+
+        ::placeholder {
+          font-weight: 500;
+          text-align: center;
+        }
+
+        input {
+          outline: none;
+          font-size: 1.5rem;
+          width: fit-content;
+          // text-align: center;
+          padding: 10px 20px;
+          border: none;
+          text-align: left;
+        }
+
+        &:visited {
+          border: 2px solid $redshade;
+        }
+      }
     }
-        #submitphone{
-            margin: auto;
-            font-size: 25px;
-            height: 51px;
-            color: $redshade;
-            padding: 0px;
+    #submitphone {
+      margin: auto;
+      font-size: 25px;
+      height: 51px;
+      color: $redshade;
+      padding: 0px;
 
-
-            &:hover{
-                background-color: $redshade ;
-                color: white;
-            }
+      &:hover {
+        background-color: $redshade;
+        color: white;
+      }
     }
 
-
-    .otp-boxes{        
-        display: flex;
-        align-items: center;
+    .otp-boxes {
+      display: flex;
+      align-items: center;
     }
 
-    .otp-input{
-        border-style: solid;
-        border-color: $redshade;
-        border-radius: 25%;
-        margin: 0.15em;
-        outline: none;
+    .otp-input {
+      border-style: solid;
+      //   border-color: $redshade;
+      border-radius: 25%;
+      margin: 0.15em;
+      outline: none;
+      font-size: 65%;
+      padding-top: 6px;
+      height: 40px;
     }
+  }
+  .slider {
+    width: 50%;
+    float: right;
+    height: 100vh;
 
- 
-
- }
-    .slider {
-        width: 50%;
-        float:right;
-        height:100vh;
-    
     img {
-        width: 100%;
-        height:100vh;
-        background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
     }
     .owl-theme {
-        .owl-dots {
-            display: none;
-        }
-    }    
-    }
-
-
-}
-@media screen and (max-width:485px){
-
-    .Sign{
-        position: static;
-        // background-color: red;
-       .sign-in-form{
-            padding-top: 5px;
-            .otp-input{
-                border-style: double;
-                border-radius: 25%;
-                margin: 0em;
-                outline: none;
-            }
-
-          }
-
-        .submit-page{
-            margin: 0px;
-        }
-    }
-
-}
-
-@media screen and (max-width:716px){
-
-    .sign-box{
-        position: static;
-    .Sign{
-        width: 100%;
-        float: none;
-     }   
-    
-
-    .slider{
-        width: 100%;
-        float: none;
+      .owl-dots {
         display: none;
+      }
     }
+  }
 }
+@media screen and (max-width: 485px) {
+  .Sign {
+    position: static;
+    // background-color: red;
+    .sign-in-form {
+      padding-top: 5px;
+      .otp-input {
+        border-style: double;
+        border-radius: 25%;
+        margin: 0em;
+        outline: none;
+      }
+    }
+
+    .submit-page {
+      margin: 0px;
+    }
+  }
 }
 
+@media screen and (max-width: 716px) {
+  .sign-box {
+    position: static;
+    .Sign {
+      width: 100%;
+      float: none;
+    }
 
-@media screen and (max-width:400px){
+    .slider {
+      width: 100%;
+      float: none;
+      display: none;
+    }
+  }
+}
 
-    .Sign-content{
-     
+@media screen and (max-width: 400px) {
+  .Sign-content {
+    display: flex;
+    flex-direction: row;
+
+    .mdl-grid {
+      box-sizing: border-box;
+      width: 100%;
+      position: static;
+      margin: 0px;
+      padding: 16px;
+    }
+
+    .sign-in-form {
+      .input-box {
         display: flex;
-        flex-direction: row;
-
-    .mdl-grid{
-
-        box-sizing: border-box;
-        width: 100%;
-        position: static;
-        margin: 0px;
-        padding: 16px;
+      }
     }
-
-
-    .sign-in-form{
-        .input-box{
-           display: flex;
-        }
-    }
-
-    }
+  }
 }
-
 
 // MainView CSS
 
-.stationListItem{
+.stationListItem {
+  a {
+    color: black;
 
-    a{
-        color:black;
-
-        &:hover{
-            padding-bottom:10px;
-        }
+    &:hover {
+      padding-bottom: 10px;
     }
-    
-    &:hover{
-        color: rgba(255, 10, 10, 0.9);
-        transition: color 0.1s linear ;
-        font-size:21px;
-        letter-spacing: 1px;
-        transition: font-size,letter-spacing 250ms;
+  }
+
+  &:hover {
+    color: rgba(255, 10, 10, 0.9);
+    transition: color 0.1s linear;
+    font-size: 21px;
+    letter-spacing: 1px;
+    transition: font-size, letter-spacing 250ms;
+    transition-timing-function: ease-out;
+  }
+  .listItemImg {
+    margin: 10px;
+  }
+}
+
+.mainViewWrapper {
+  #main-header {
+    background-color: $redshade;
+
+    .navbarLinks {
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      font-size: 13px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  display: block;
+  // margin: "0px auto";
+  .sidebar-list-hr {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .class-content {
+    text-align: center;
+
+    #sidebarImg {
+      border-radius: 10%;
+      padding: 0px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid black;
+      padding: 5px;
+      outline: none;
+    }
+  }
+}
+.list-container {
+  ul {
+    text-align: center;
+    margin: 0px 0px 0px;
+    padding: 0px;
+  }
+  margin-top: 10px;
+  .nav-item {
+    list-style: none;
+    padding: 15px;
+    .sidebar-links {
+      color: grey;
+      text-decoration: solid;
+      font-size: medium;
+      &:hover {
+        color: red;
+        font-weight: 900;
+        font-size: 22px;
+        transition: font-size 300ms;
         transition-timing-function: ease-out;
-
+      }
+      .fa {
+        color: red;
+        padding-right: 5px;
+        font-size: 30px;
+      }
     }
-    .listItemImg{
-        margin : 10px;
-    }
+  }
 }
-
-.mainViewWrapper{
-
-    #main-header{
-        background-color: $redshade;
-
-    
-    .navbarLinks
-    {
-        font-weight: 800;
-        letter-spacing: 0.4px;
-        font-size: 13px;
-        &:hover{
-            text-decoration: underline;
-        
-        }
-
- 
-    }
-}
-
-    display: block;
-    // margin: "0px auto";
-    .sidebar-list-hr{
-        text-align: center;
-        margin: 0 auto;
-        width: 50%;
-    }
-
-    .class-content{
-
-        text-align: center;
-    
-            #sidebarImg{
-                border-radius: 10% ;
-                padding: 0px;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                border: 2px solid black;
-                padding: 5px;
-                outline: none;
-                
-            
-            }
- 
-        }
-    }
-    .list-container{
-        ul{
-            text-align:center;
-            margin:0px 0px 0px;
-            padding: 0px;
-        }
-        margin-top: 10px;
-        .nav-item{
-            list-style: none;
-            padding: 15px;
-            .sidebar-links{
-                color:grey;
-                text-decoration: solid;
-                font-size: medium;
-                &:hover{
-                    color:red;
-                    font-weight: 900;
-                    font-size: 22px;
-                    transition: font-size 300ms ;
-                    transition-timing-function: ease-out ;
-                }
-                .fa{
-                    color: red;
-                    padding-right: 5px;
-                    font-size: 30px;
-                }
-            
-            }
-        }
-    }
-    
-  
-
-
 
 // profile page css
 
-#myprofile-container{
+#myprofile-container {
+  // width: 70%;
+  // margin-top: 20px;
+  // margin-left: auto;
+  // margin-right: auto;
+  img {
+    border: 4px solid black;
+    padding: 2px;
+    z-index: 1000;
+  }
+  // .myprofile-imagebox {
+  //   // border: 8px solid black;
+  //   border-radius: 1px;
+  //   padding: 0.1px;
+  //   background-color: rgba(0, 0, 0, 0.9);
+  //   width: 90%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   margin-top: 50px;
+  //   // margin-top: 30px;
+  // }
 
-    width: 70%;
-    margin-top: 20px;
-    margin-left:auto;
-    margin-right: auto;
-    img{
-        border: 4px solid black;
-        padding: 2px;
-        z-index: 1000;
-    }
-    .myprofile-imagebox{
-        // border: 8px solid black;
-        border-radius: 1px;
-        padding: 0.1px;
-        background-color: rgba(0, 0, 0, 0.9);
-        width: 90%;
-        margin-left:auto;
-        margin-right: auto;
-        margin-top:50px;
-        // margin-top: 30px;
-    }
-
-    .myprofile-textfields{
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding-left: 30px;
-
-    }
-    
-    text-align:center;
-    padding:40px;
-
-    #profile-picture{
-        width:200px;
-        height:200px;
-        border-radius: 50%;
-    }
-
-
-    .evcs-button , button {
-            @include evcs-button();
-        }
-
-    }
-        
-
-#historyContainer{
-    padding: 40px;
-    #paymentDoneIcon{
-        color: green;
-        font-size: 22px;
-    }
-}
-
-
-#myvehicle-container{
-    text-Align:center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  .row-styles {
     margin-top: 50px;
     margin-bottom: 50px;
-    scroll-behavior: initial;
+    padding-left: 30px;
+  }
 
-    h3{
-        color: red;
-        font-weight: 300;
-        letter-spacing: 5px;
-        background-color: rgba(224, 168, 168, 0.9);
-        padding: 8px;
-    }
-    
-    #vehicle-picture{
-        width: 200px;
-        border-radius: 25%;
-        border-top : 3px solid $redshade;
-        border-bottom : 3px solid $redshade;
-        padding: 4px;
+  text-align: center;
+  padding: 40px;
 
-    }
-    table{
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
+  #profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .evcs-button,
+  button {
+    @include evcs-button();
+  }
+}
+
+#historyContainer {
+  padding: 40px;
+  #paymentDoneIcon {
+    color: green;
+    font-size: 22px;
+  }
+}
+
+#myvehicle-container {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  scroll-behavior: initial;
+
+  h3 {
+    color: red;
+    font-weight: 300;
+    letter-spacing: 5px;
+    background-color: rgba(224, 168, 168, 0.9);
+    padding: 8px;
+  }
+
+  #vehicle-picture {
+    width: 200px;
+    border-radius: 25%;
+    border-top: 3px solid $redshade;
+    border-bottom: 3px solid $redshade;
+    padding: 4px;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  button {
+    @include evcs-button();
+  }
+
+  .addRC-form {
+    form {
+
+      h3 {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        font-size: 20px;
+      }
+
+      .addRC-inputs {
         width: 100%;
-      }
-      
-      td, th {
-        border: 1px solid #dddddd;
+        margin: 0px;
+        padding: 10px;
+        border: 2px solid rgba(224, 168, 168, 0.9);
         text-align: center;
-        padding: 8px;
-      }
-      
-      tr:nth-child(even) {
-        background-color: #dddddd;
       }
 
       button{
-          @include evcs-button();
+        @include evcs-button();
+        margin : 20px auto;
+
       }
 
-      .addRC-form{
-
-        form{
-            h3{
-                margin-bottom: 0px;
-                padding-bottom: 0px;
-                font-size: 20px;
-                
-            }
-            .addRC-inputs{
-                width: 100%;
-                margin: 0px;
-                padding: 10px;
-                border: 2px solid rgba(224, 168, 168, 0.9);
-                text-align: center;
-                
-            }      
-            
-            button{
-                @include evcs-button();
-                margin-top: 20px;
-            }
-        }
     }
+  }
 }
-
 
 // Bookings Component Scss
 
-
-.bookings{
-    
-
-    padding: 50px;
-    #daysPendingIcon{
-        color:red;
-        font-size: 22px;
-
-    }
-
+.bookings {
+  padding: 50px;
+  #daysPendingIcon {
+    color: red;
+    font-size: 22px;
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//React-otp styles
+.otp {
+  height: 14px;
+  font-size: small;
+}
 
