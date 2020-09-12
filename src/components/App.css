@@ -1,3 +1,21 @@
+.evcsButton {
+  outline: none;
+  background-color: #ec1b21;
+  letter-spacing: 0.9px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.evcsInput {
+  width: 280px;
+  display: block;
+  height: 40px;
+  font-size: 15px;
+  margin: 18px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,23 +28,6 @@
 }
 
 .sign-box .Sign {
-  /*
-@media screen and (max-width:528px){
-    .logo-header{
-        img{
-            width: 25%;
-        }
-    }
-}
-
-@media screen and (max-width:1050px) {
-    .logo-header{
-        img{
-            width: 18%;
-        }
-    }
-}
-*/
   background-color: white;
   width: 50%;
   height: 100%;
@@ -35,7 +36,7 @@
 }
 
 .sign-box .Sign .logo-header {
-  background-color: red;
+  background-color: #ec1b21;
   width: 100%;
   height: auto;
 }
@@ -51,7 +52,7 @@
   color: white;
   font-size: large;
   margin: 17px 10px;
-  font-size-adjust: 0.60;
+  font-size-adjust: 0.6;
   font-weight: bolder;
 }
 
@@ -82,7 +83,7 @@
 }
 
 .sign-box .Sign .sign-in-form h3 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -97,17 +98,17 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: 2px solid #EC1B21;
+  border: 2px solid #ec1b21;
   margin: 0 auto;
   padding: 0px;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Comic Neue", cursive;
 }
 
 .sign-box .Sign .sign-in-form .input-box .fa-phone {
   padding: 5px;
   margin: 3px;
   font-size: 35px;
-  color: #EC1B21;
+  color: #ec1b21;
 }
 
 .sign-box .Sign .sign-in-form .input-box ::-webkit-input-placeholder {
@@ -142,19 +143,19 @@
 }
 
 .sign-box .Sign .sign-in-form .input-box:visited {
-  border: 2px solid #EC1B21;
+  border: 2px solid #ec1b21;
 }
 
 .sign-box .Sign #submitphone {
   margin: auto;
   font-size: 25px;
   height: 51px;
-  color: #EC1B21;
+  color: #ec1b21;
   padding: 0px;
 }
 
 .sign-box .Sign #submitphone:hover {
-  background-color: #EC1B21;
+  background-color: #ec1b21;
   color: white;
 }
 
@@ -168,15 +169,13 @@
 }
 
 .sign-box .Sign .otp-input {
-  border-style: double;
+  border-style: solid;
   border-radius: 25%;
   margin: 0.15em;
   outline: none;
-}
-
-.sign-box .Sign Button {
-  display: block;
-  margin: 40px auto;
+  font-size: 65%;
+  padding-top: 6px;
+  height: 40px;
 }
 
 .sign-box .slider {
@@ -253,60 +252,230 @@
   }
 }
 
-.stationListItem :hover {
+.stationListItem a {
+  color: black;
+}
+
+.stationListItem a:hover {
+  padding-bottom: 10px;
+}
+
+.stationListItem:hover {
   color: rgba(255, 10, 10, 0.9);
   -webkit-transition: color 0.1s linear;
   transition: color 0.1s linear;
+  font-size: 21px;
+  letter-spacing: 1px;
+  -webkit-transition: font-size, letter-spacing 250ms;
+  transition: font-size, letter-spacing 250ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 .stationListItem .listItemImg {
   margin: 10px;
 }
-/*# sourceMappingURL=App.css.map */
 
-.card{
-    background-color: #f74702c5;
-    color: white;
-    border-radius: 3rem;
+.mainViewWrapper {
+  display: block;
 }
 
-.nav-item{
-    list-style-type: none;
-    padding-top: 0.5em;
+.mainViewWrapper #main-header {
+  background-color: #ec1b21;
 }
 
-li a {
-    color: rgba(0, 0, 0, 0.692);
-    font-weight: bold;
-    font-size: larger;
+.mainViewWrapper #main-header .navbarLinks {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 13px;
 }
 
-.nav-item :hover {
-    color: rgba(0, 0, 0, 0.568);
+.mainViewWrapper #main-header .navbarLinks:hover {
+  text-decoration: underline;
+}
+
+.mainViewWrapper .sidebar-list-hr {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.mainViewWrapper .class-content {
+  text-align: center;
+}
+
+.mainViewWrapper .class-content #sidebarImg {
+  border-radius: 10%;
+  padding: 0px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 5px;
+  outline: none;
 }
 
 .list-container {
-    background-color: aliceblue;
+  margin-top: 10px;
 }
 
-.card-content {
-    padding: 5rem;
+.list-container ul {
+  text-align: center;
+  margin: 0px 0px 0px;
+  padding: 0px;
 }
 
-/* .mdl-layout__header-row {
-    background-color: green;
-    color: rgb(238, 255, 0);
+.list-container .nav-item {
+  list-style: none;
+  padding: 15px;
 }
 
-.mdl-layout__header {
-    background-color: rgb(0, 255, 255);
+.list-container .nav-item .sidebar-links {
+  color: grey;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  font-size: medium;
 }
 
-.mdl-layout__drawer-button {
-    color: chocolate;
-    background-color: black;
-    
-} */
+.list-container .nav-item .sidebar-links:hover {
+  color: red;
+  font-weight: 900;
+  font-size: 22px;
+  -webkit-transition: font-size 300ms;
+  transition: font-size 300ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
 
+.list-container .nav-item .sidebar-links .fa {
+  color: red;
+  padding-right: 5px;
+  font-size: 30px;
+}
 
+#myprofile-container {
+  text-align: center;
+  padding: 40px;
+}
 
+#myprofile-container img {
+  border: 4px solid black;
+  padding: 2px;
+  z-index: 1000;
+}
+
+#myprofile-container .row-styles {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+}
+
+#myprofile-container #profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#myprofile-container .evcs-button,
+#myprofile-container button {
+  outline: none;
+  background-color: #ec1b21;
+  letter-spacing: 0.9px;
+  font-weight: 600;
+}
+
+#historyContainer {
+  padding: 40px;
+}
+
+#historyContainer #paymentDoneIcon {
+  color: green;
+  font-size: 22px;
+}
+
+#myvehicle-container {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  scroll-behavior: initial;
+}
+
+#myvehicle-container h3 {
+  color: red;
+  font-weight: 300;
+  letter-spacing: 5px;
+  background-color: rgba(224, 168, 168, 0.9);
+  padding: 8px;
+}
+
+#myvehicle-container #vehicle-picture {
+  width: 200px;
+  border-radius: 25%;
+  border-top: 3px solid #ec1b21;
+  border-bottom: 3px solid #ec1b21;
+  padding: 4px;
+}
+
+#myvehicle-container table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#myvehicle-container td,
+#myvehicle-container th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+#myvehicle-container tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#myvehicle-container button {
+  outline: none;
+  background-color: #ec1b21;
+  letter-spacing: 0.9px;
+  font-weight: 600;
+}
+
+#myvehicle-container .addRC-form form h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 20px;
+}
+
+#myvehicle-container .addRC-form form .addRC-inputs {
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  border: 2px solid rgba(224, 168, 168, 0.9);
+  text-align: center;
+}
+
+#myvehicle-container .addRC-form form button {
+  outline: none;
+  background-color: #ec1b21;
+  letter-spacing: 0.9px;
+  font-weight: 600;
+  margin: 20px auto;
+}
+
+.bookings {
+  padding: 50px;
+}
+
+.bookings #daysPendingIcon {
+  color: red;
+  font-size: 22px;
+}
+
+.otp {
+  height: 14px;
+  font-size: small;
+}
+/*# sourceMappingURL=App.css.map */
