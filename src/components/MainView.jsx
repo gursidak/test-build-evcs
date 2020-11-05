@@ -42,7 +42,6 @@ class MainView extends Component {
                         <List style={{ width: '70%' }}>
                             {this.RenderList()}
                         </List>
-                        <History />
                     </div>
                 )
             }
@@ -146,11 +145,11 @@ class MainView extends Component {
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(2)} } href="#"><i className="fa fa-car"></i> My Vehicle</a></li>      <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-history"></i> My Trips</a></li>            <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-credit-card"></i> Payment</a></li>         <hr className="sidebar-list-hr" />
-                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-history -alt"></i> History</a></li>             <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(4)} } href="#"><i className="fa fa-history -alt"></i> History</a></li>             <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-address-card"></i> Contact Us</a></li>     <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-star"></i> Rate Us</a></li>                <hr className="sidebar-list-hr" />
                                     <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-cog"></i> Settings</a></li>                <hr className="sidebar-list-hr" />
-                                    <li className="nav-item">   <a className="sidebar-links" onClick={ () => {this.handleComponentLoading(0)} } href="#"><i className="fa fa-sign-out"></i> Logout</a></li>             <hr className="sidebar-list-hr" />
+                                    <li className="nav-item">   <a className="sidebar-links"                                                    href="/Sign"><i className="fa fa-sign-out"></i> Logout</a></li>             <hr className="sidebar-list-hr" />
                                 </ul>
                             </div>
                         </Drawer>
@@ -166,7 +165,6 @@ class MainView extends Component {
             </div>
         );
     }
-
 
 }
 

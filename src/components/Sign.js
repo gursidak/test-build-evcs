@@ -12,7 +12,7 @@ class Sign extends Component {
     super(props);
 
     this.state = {
-      activelog: 1,
+      activelog: 0,
       imageUploaded: null,
       mobileNo: "",
       name: "",
@@ -73,7 +73,7 @@ class Sign extends Component {
             className="sign-in-form"
             onSubmit={() => this.changeState(1)}
           >
-            <h3>GATS Charging Station</h3>
+            <h3 style={{}}>GATS Charging Station</h3>
             <br />
             <div className="input-box">
               <i className="fa fa-phone"></i>

@@ -79,8 +79,14 @@ $redshade: #ec1b21;
       width: 100%;
 
       h3 {
-        font-family: "Quicksand", sans-serif;
-        color: rgba(0, 0, 0, 0.9);
+        // font-family: "Quicksand", sans-serif;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 45%;
+        color: #444;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        word-spacing: 2px;
       }
 
       .input-box {
@@ -88,9 +94,10 @@ $redshade: #ec1b21;
         flex-direction: row;
         width: fit-content;
         border: 2px solid $redshade;
-        margin: 0 auto;
         padding: 0px;
-        font-family: "Comic Neue", cursive;
+        color: #555;
+        width: 100%;
+        // font-family: 'Montserrat', sans-serif;
 
         .fa-phone {
           padding: 5px;
@@ -102,13 +109,14 @@ $redshade: #ec1b21;
         ::placeholder {
           font-weight: 500;
           text-align: center;
+          color: $redshade;
+          font-family: "cursive";
         }
 
         input {
           outline: none;
           font-size: 1.5rem;
-          width: fit-content;
-          // text-align: center;
+          width: 79%;
           padding: 10px 20px;
           border: none;
           text-align: left;
@@ -118,7 +126,6 @@ $redshade: #ec1b21;
           border: 2px solid $redshade;
         }
       }
-    }
     #submitphone {
       margin: auto;
       font-size: 25px;
@@ -131,40 +138,125 @@ $redshade: #ec1b21;
         color: white;
       }
     }
-
-    .otp-boxes {
-      display: flex;
-      align-items: center;
-    }
-
-    .otp-input {
-      border-style: solid;
-      //   border-color: $redshade;
-      border-radius: 25%;
-      margin: 0.15em;
-      outline: none;
-      font-size: 65%;
-      padding-top: 6px;
-      height: 40px;
-    }
   }
-  .slider {
-    width: 50%;
-    float: right;
-    height: 100vh;
+}
 
-    img {
-      width: 100%;
-      height: 100vh;
-      background-repeat: no-repeat;
+@media screen and (max-width:510px) {
+  .sign-in-form{
+
+
+    h3{
+
+      font-size: 35% !important;
     }
-    .owl-theme {
-      .owl-dots {
-        display: none;
+
+    .input-box{
+
+      width: 85% !important;
+      margin: 0 auto;
+
+      input{
+        width: 72% !important;
       }
+    }
+
+
+
+  }  
+}
+
+@media screen and (max-width:415px) {
+  .sign-in-form{
+
+
+    h3{
+
+      font-size: 32% !important;
+    }
+
+    .input-box{
+
+      width: 100% !important;
+      margin: 0 auto;
+
+      input{
+        width: 70% !important;
+      }
+
+      ::placeholder{
+        font-size: 85% !important;
+      }
+    }
+
+
+
+  }  
+}
+
+
+@media screen and (max-width:360px) {
+  .sign-in-form{
+
+
+    h3{
+
+      font-size: 28% !important;
+    }
+
+    .input-box{
+
+      width: 100% !important;
+      margin: 0 auto;
+
+      input{
+        width: 65% !important;
+      }
+
+      ::placeholder{
+        font-size: 67% !important;
+      }
+    }
+
+
+
+  }  
+}
+
+  // homepage styles finishes here
+
+  .otp-boxes {
+    display: flex;
+    align-items: center;
+  }
+
+  .otp-input {
+    border-style: solid;
+    //   border-color: $redshade;
+    border-radius: 25%;
+    margin: 0.15em;
+    outline: none;
+    font-size: 65%;
+    padding-top: 6px;
+    height: 40px;
+  }
+}
+.slider {
+  width: 50%;
+  float: right;
+  height: 100vh;
+
+  img {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+  .owl-theme {
+    .owl-dots {
+      display: none;
     }
   }
 }
+
 @media screen and (max-width: 485px) {
   .Sign {
     position: static;
@@ -185,7 +277,7 @@ $redshade: #ec1b21;
   }
 }
 
-@media screen and (max-width: 716px) {
+@media screen and (max-width: 943px) {
   .sign-box {
     position: static;
     .Sign {
@@ -413,7 +505,6 @@ $redshade: #ec1b21;
 
   .addRC-form {
     form {
-
       h3 {
         margin-bottom: 0px;
         padding-bottom: 0px;
@@ -428,12 +519,10 @@ $redshade: #ec1b21;
         text-align: center;
       }
 
-      button{
+      button {
         @include evcs-button();
-        margin : 20px auto;
-
+        margin: 20px auto;
       }
-
     }
   }
 }
@@ -454,3 +543,46 @@ $redshade: #ec1b21;
   font-size: small;
 }
 
+.profile-update {
+  font-size: small;
+}
+
+@media (max-width: 575px) {
+  #myprofile-container {
+    .coll {
+      padding: 5px;
+      text-align: left;
+      font-size: x-small;
+    }
+
+    .input-col {
+      text-align: left;
+      padding: 5px;
+    }
+
+    .text-center {
+      text-align: left !important;
+    }
+  }
+}
+
+// @media(min-width:575px)
+// {
+
+//   #myprofile-container{
+
+//     .coll{
+
+//       text-align: center;
+//       font-size: small;
+//       background-color:yellow;
+
+//     }
+
+//     .input-col{
+//       text-align: center;
+//       background-color: #ec1b21;
+
+//     }
+//   }
+// }
