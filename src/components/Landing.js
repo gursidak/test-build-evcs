@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Logo.css'
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 class First extends Component {
     state = {
         redirect: false
