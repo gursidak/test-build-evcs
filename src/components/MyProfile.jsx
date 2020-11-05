@@ -57,12 +57,12 @@ class Profile extends Component {
           </div>
         </div>
 
-        <form className="container text-center">
-          <div className="row row-styles justify-content-center">
-            <div className="col-12 col-sm-4 text-left" style={{ paddingTop: "8px" }}>
+        <form className="container profile-update text-center">
+          <div className="row row-styles justify-content-center labels">
+            <div className="col-12 coll col-sm-4 " style={{ paddingTop: "8px" }}>
               CHANGE NAME
             </div>
-            <div className="col-12 col-sm-auto">
+            <div className="col-12 input-col input-col col-sm-auto">
               <TextField
                 label="Name"
                 id="outlined-size-small"
@@ -73,11 +73,11 @@ class Profile extends Component {
             </div>
           </div>
 
-          <div className="row row row-styles justify-content-center">
-            <div className="col-12 col-sm-4 text-left" style={{ paddingTop: "8px" }}>
+          <div className="row row row-styles justify-content-center labels">
+            <div className="col-12 coll col-sm-4 " style={{ paddingTop: "8px" }}>
               PHONE NUMBER
             </div>
-            <div className="col-12 col-sm-auto">
+            <div className="col-12 input-col col-sm-auto">
               <TextField
                 label="Phone"
                 id="outlined-size-small"
@@ -88,11 +88,11 @@ class Profile extends Component {
             </div>
           </div>
 
-          <div className="row row row-styles justify-content-center">
-            <div className="col-12 col-sm-4 text-left" style={{ paddingTop: "8px" }}>
+          <div className="row row row-styles justify-content-center labels">
+            <div className="col-12 coll col-sm-4  " style={{ paddingTop: "8px" }}>
               EMAIL ADDRESS
             </div>
-            <div className="col-12 col-sm-auto">
+            <div className="col-12 input-col col-sm-auto labels">
               <TextField
                 label="Email"
                 id="outlined-size-small"
@@ -104,13 +104,10 @@ class Profile extends Component {
             </div>
 
 
-            <div className="row row-styles justify-content-center">
+            <div className="row row-styles">
               <div className="col-12 text-center">
                 <button
-                  className="btn btn-danger evcsButton "
-                  style={{}}
-                  style={{ paddingLeft: "50px", paddingRight: "50px" }}
-                >
+                  className="btn btn-danger evcsButton ">              
                   SAVE CHANGES
                 </button>
               </div>
