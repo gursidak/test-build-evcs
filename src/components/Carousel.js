@@ -14,11 +14,11 @@ export class carousel extends Component {
                 autoplay
                 loop
             >
-                <div className=''><img src='logo.jpg' /></div>
-                <div className='item'><img src='logo.jpg' /></div>
-                <div className='item'><img src='logo.jpg' /></div>
-                <div className='item'><img src='logo.jpg' /></div>
-                <div className='item'><img src='logo.jpg' /></div>
+                {/* <div className=''><img src='logo.jpg' /></div> */}
+                <div className='item'><img alt="carouselImg1" src='logo.jpg' /></div>
+                <div className='item'><img alt="carouselImg2" src='logo.jpg' /></div>
+                <div className='item'><img alt="carouselImg3" src='logo.jpg' /></div>
+                <div className='item'><img alt="carouselImg4" src='logo.jpg' /></div>
             </OwlCarousel>
         )
     }
