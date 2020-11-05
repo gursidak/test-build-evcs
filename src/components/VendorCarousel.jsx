@@ -6,11 +6,6 @@ import React, { Component } from 'react';
  import carousel2 from "./jordan2.jpg" 
 
  import "./App.css"
- 
-const options = {
-    items: 8,
-};
-
 
 
 class VendorCarousel extends Component {

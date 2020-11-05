@@ -36,7 +36,7 @@ class MainView extends Component {
 
 
       renderComponent( ) {
-            if(this.state.activeComponent == 0){
+            if(this.state.activeComponent === 0){
                 return(
                     <div>
                         <List style={{ width: '70%' }}>
@@ -83,7 +83,7 @@ class MainView extends Component {
     RenderList() {
         return this.state.list.map((vendor) => (
             < ListItem key={vendor.key} className='stationListItem' threeLine >
-                <img src={vendor.img} height="60px" width="80px" className="listItemImg" />
+                <img src={vendor.img} height="60px" width="80px" className="listItemImg" alt="stationlogo" />
                 <ListItemContent onClick={() => { this.changeFocus(vendor) }} subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle."> <a onClick={this.isModalOpen}>{vendor.name}</a>
                 </ListItemContent>
                 <ListItemAction>
